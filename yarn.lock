@@ -1265,9 +1265,9 @@
     glob-to-regexp "^0.3.0"
 
 "@narative/gatsby-theme-novela@^0.*":
-  version "0.6.5"
-  resolved "https://registry.yarnpkg.com/@narative/gatsby-theme-novela/-/gatsby-theme-novela-0.6.5.tgz#2f824ee1b03642160672dd29f0dd472c611e08fb"
-  integrity sha512-TxaEk18yEH+orc3QJ9MHvuZDUMBm3oH1bPuO3vm2exwXZ82vM2igKDo8bdhtH/Gen7/2FxlGgYbtNEQttVGNow==
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/@narative/gatsby-theme-novela/-/gatsby-theme-novela-0.8.0.tgz#eadc8dec235a9a20043ce249e735e21d79163f1b"
+  integrity sha512-YU1Y3ZP8WCqMnjErjEsZehr1Azx17WhY2XAUcZUvLPK+004CDGAFG1aGnhe4TaSqJykiWJxlL9p/diWUbE3eZw==
   dependencies:
     "@emotion/core" "^10.0.14"
     "@emotion/styled" "^10.0.14"
