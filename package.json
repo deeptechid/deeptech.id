@@ -9,7 +9,6 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "@narative/gatsby-theme-novela": "^0.*",
     "gatsby": "^2.13.41",
     "gatsby-background-image": "^0.8.12",
     "gatsby-plugin-manifest": "^2.2.18",
