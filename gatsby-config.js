@@ -5,8 +5,12 @@ module.exports = {
     siteUrl: `https://deeptech.id`,
     description: `Knowledge sharing, meaningful networking, self-improvement & transformation.`,
     hero: {
-      heading: `Knowledge sharing, meaningful networking, self-improvement & transformation.`,
-      maxWidth: 652,
+      heading: `Untuk Indonesia setara di bidang teknologi!`,
+      heading_2: `Ikuti update kegiatan kami`,
+      maxWidth: 580,
+    },
+    article_hero: {
+      heading: `Ikuti Event kami untuk menunjang karir-mu`,
     },
     social: [
       // {
@@ -48,14 +52,15 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Novela by Narative`,
-        short_name: `Novela`,
+        name: `Deeptech Foundation Indonesia`,
+        short_name: `Deeptech`,
         start_url: `/`,
-        background_color: `#fff`,
-        theme_color: `#fff`,
+        background_color: `#FAFAFA`,
+        theme_color: `#FAFAFA`,
         display: `standalone`,
         icon: `src/assets/favicon.png`,
       },
     },
+    `gatsby-plugin-offline`,
   ],
 };
