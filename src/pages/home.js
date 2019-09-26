@@ -11,7 +11,7 @@ function Homes() {
       <SEO />
       <Section>
         <div style={{ marginTop: "100px" }}>
-          <Headings.h1>Homes aiwjoiahoiwa</Headings.h1>
+          <Headings.h1>Homes aiaaawjoiahoiwa</Headings.h1>
         </div>
       </Section>
     </Layout>
