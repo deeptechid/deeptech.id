@@ -2,7 +2,7 @@ import React from "react";
 import styled from "@emotion/styled";
 
 import Section from "@components/Section";
-import SubsSection from "@components/SubsSection";
+// import SubsSection from "@components/SubsSection";
 import SEO from "@components/SEO";
 import Layout from "@components/Layout";
 import Paginator from "@components/Navigation/Navigation.Paginator";
@@ -12,7 +12,7 @@ import ArticlesList from "@narative/gatsby-theme-novela/src/sections/articles/Ar
 import Heading from './../sections/heading/Heading';
 import SiapaKami from "../sections/siapakami/Siapa.Kami";
 
-import Subscription from "@components/Subscription/Subscription";
+// import Subscription from "@components/Subscription/Subscription";
 import Podcast from "@components/Podcast/Podcast";
 
 
@@ -38,9 +38,9 @@ function ArticlesPage({ location, pageContext }) {
 
       <Podcast />
 
-      <SubsSection>
+      {/* <SubsSection>
         <Subscription />
-      </SubsSection>
+      </SubsSection> */}
     </Layout>
   );
 }

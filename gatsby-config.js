@@ -7,7 +7,7 @@ module.exports = {
     siteUrl: `https://deeptech.id`,
     description: `Knowledge sharing, meaningful networking, self-improvement & transformation.`,
     hero: {
-      heading: `Untuk Indonesia setara di bidang teknologi!`,
+      heading: `Berbagai update perkembangan teknologi dan kegiatan kami`,
       heading_2: `Ikuti update kita di`,
       maxWidth: 652,
     },
