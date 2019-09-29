@@ -7,9 +7,8 @@ module.exports = {
     siteUrl: `https://deeptech.id`,
     description: `Knowledge sharing, meaningful networking, self-improvement & transformation.`,
     hero: {
-      heading: `Berbagai update perkembangan teknologi dan kegiatan kami`,
-      heading_2: `Ikuti update kita di`,
-      maxWidth: 652,
+      heading: `Berbagai update teknologi dan kegiatan kami`,
+      maxWidth: 800,
     },
     social: [
       // {
@@ -43,7 +42,7 @@ module.exports = {
         basePath: "/",
         authorsPage: true,
         sources: {
-          // local: true,
+          // local: false,
           contentful: true,
         },
       },
