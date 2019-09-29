@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 module.exports = {
   siteMetadata: {
     title: `DeepTech`,
@@ -5,8 +7,8 @@ module.exports = {
     siteUrl: `https://deeptech.id`,
     description: `Knowledge sharing, meaningful networking, self-improvement & transformation.`,
     hero: {
-      heading: `Knowledge sharing, meaningful networking, self-improvement & transformation.`,
-      maxWidth: 652,
+      heading: `Berbagai update teknologi dan kegiatan kami`,
+      maxWidth: 800,
     },
     social: [
       // {
@@ -40,9 +42,16 @@ module.exports = {
         basePath: "/",
         authorsPage: true,
         sources: {
-          local: true,
-          // contentful: true,
+          // local: false,
+          contentful: true,
         },
+      },
+    },
+    {
+      resolve: 'gatsby-source-contentful',
+      options: {
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
     {
