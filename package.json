@@ -14,7 +14,7 @@
     "gatsby": "^2.13.41",
     "gatsby-plugin-manifest": "^2.2.18",
     "gatsby-source-contentful": "^2.1.42",
-    "react": "^16.8.6",
+    "react": "^16.10.1",
     "react-dom": "^16.8.6"
   }
 }
