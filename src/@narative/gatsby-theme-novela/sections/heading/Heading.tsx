@@ -9,28 +9,7 @@ import Icons from '@icons';
 import mediaqueries from '@styles/media';
 import { IAuthor } from '@types';
 
-// const headerQuery = graphql`
-//   {
-//     site: allSite {
-//       edges {
-//         node {
-//           siteMetadata {
-//             hero {
-//               heading
-//               heading_2
-//               maxWidth
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// `;
-
 function Heading() {
-
-  // const results = useStaticQuery(headerQuery);
-  // const hero = results.site.edges[0].node.siteMetadata.hero;
 
   return (
     <BodySection relative id="Headers__Hero">

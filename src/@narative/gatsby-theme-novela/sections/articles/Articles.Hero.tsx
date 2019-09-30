@@ -89,11 +89,19 @@ const SubheadingContainer = styled.div`
   `};
 
   ${mediaqueries.tablet`
+    margin-left: 10%;
+    margin-right: 10%;
     margin-bottom: 60px;
+    font-size: 0.6em;
+    text-align: center;
   `};
 
   ${mediaqueries.phablet`
-    display: none;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 60px;
+    font-size: 0.6em;
+    text-align: center;
   `};
 `;
 
@@ -105,18 +113,6 @@ const GridControlsContainer = styled.div`
     display: none;
   `};
 `;
-
-// const HeadingContainer = styled.div`
-//   margin: 100px 0;
-
-//   ${mediaqueries.desktop`
-//     width: 80%;
-//   `}
-
-//   ${mediaqueries.tablet`
-//     width: 100%;
-//   `}
-// `;
 
 const HeroHeading = styled.h1`
   font-style: normal;
