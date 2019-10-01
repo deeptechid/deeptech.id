@@ -14,7 +14,7 @@ function Heading() {
   return (
     <BodySection relative id="Headers__Hero">
       <ImageContainer>
-        <img src={Header_bg} style={{ alignSelf:'center', paddingBottom:'20vh' }}/>
+        <img src={Header_bg} style={{ alignSelf:'center', maxWidth:'100%' }}/>
       </ImageContainer>
       <HeaderContainerGrid>
         <HeadingContainer 
@@ -181,6 +181,7 @@ const ImageContainer = styled.div`
   right: 0;
   left: 0;
   position: absolute;
+  padding-bottom: 5vh;
 `;
 
 const IconContainer = styled.div`
