@@ -8,7 +8,7 @@ module.exports = {
     description: `Knowledge sharing, meaningful networking, self-improvement & transformation.`,
     hero: {
       heading: `Berbagai update teknologi dan kegiatan kami`,
-      maxWidth: 800,
+      maxWidth: 788,
     },
     social: [
       // {
