@@ -13,6 +13,9 @@ function Heading() {
 
   return (
     <BodySection relative id="Headers__Hero">
+      <ImageContainer>
+        <img src={Header_bg} style={{ alignSelf:'center', paddingBottom:'20vh' }}/>
+      </ImageContainer>
       <HeaderContainerGrid>
         <HeadingContainer 
         style={{ 
@@ -41,9 +44,7 @@ function Heading() {
           </HeadingDescriptionContainer>
         </HeadingContainer>
         <ImageHeaderContainer>
-          <ImageContainer>
-            <img src={Header_bg} style={{ width:'auto', height:'380px', alignSelf:'center' }}/>
-          </ImageContainer>
+          
         </ImageHeaderContainer>
       </HeaderContainerGrid>
     </BodySection>
@@ -161,7 +162,7 @@ const ImageHeaderContainer = styled.div`
   `}
 
   ${mediaqueries.tablet`
-    display: none;
+    
   `}
 `;
 
@@ -169,11 +170,16 @@ const ImageContainer = styled.div`
   z-index: 0;
   width: auto !important;
   max-height: 100% !important;
-  padding: 1vh;import { BodySection } from '@components/BodySection';
+  padding: 1vh;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
   align-self: center;
-  top: 5%;
-  right: 15%;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  left: 0;
   position: absolute;
 `;
 

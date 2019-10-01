@@ -79,36 +79,45 @@ function SiapaKami() {
               <SiapaKamiGrid_Mobile>
               <SiapaKamiContainer_Mobile>
                   <SiapaKamiContainer_Inner>
+                    <ContentContainer_Mobile>
+                        <img src={SiapaKami_1} style={{ alignSelf:'center', maxHeight:'100%', maxWidth:'100%' }}/>
                       <HeaderSiapaKamiBody>
                       Siapa Kami ?
                       </HeaderSiapaKamiBody>
                       <ParagraphSiapaKami>
                       Kami adalah Startup teknologi non-profit pertama, yang memberdayakan orang-orang dengan keterampilan teknologi dan untuk transformasi digital di Indonesia.
                       </ParagraphSiapaKami>
+                    </ContentContainer_Mobile>
                   </SiapaKamiContainer_Inner>
               </SiapaKamiContainer_Mobile>
               </SiapaKamiGrid_Mobile>
               <SiapaKamiGrid_Mobile>
               <SiapaKamiContainer_Mobile>
                   <SiapaKamiContainer_Inner>
-                      <HeaderSiapaKamiBody>
-                      Apa tujuan kami?
-                      </HeaderSiapaKamiBody>
-                      <ParagraphSiapaKami>
-                      Seperti tagline kami “Untuk Indonesia setara di bidang teknologi”, kami ada untuk mengatasi masalah kapabilitas talenta teknologi di Indonesia.
-                      </ParagraphSiapaKami>
+                      <ContentContainer_Mobile>
+                        <img src={SiapaKami_2} style={{ alignSelf:'center', maxHeight:'100%', maxWidth:'100%' }}/>
+                        <HeaderSiapaKamiBody>
+                        Apa tujuan kami?
+                        </HeaderSiapaKamiBody>
+                        <ParagraphSiapaKami>
+                        Seperti tagline kami “Untuk Indonesia setara di bidang teknologi”, kami ada untuk mengatasi masalah kapabilitas talenta teknologi di Indonesia.
+                        </ParagraphSiapaKami>
+                      </ContentContainer_Mobile>
                   </SiapaKamiContainer_Inner>
               </SiapaKamiContainer_Mobile>
               </SiapaKamiGrid_Mobile>
               <SiapaKamiGrid_Mobile>
               <SiapaKamiContainer_Mobile>
                   <SiapaKamiContainer_Inner>
-                      <HeaderSiapaKamiBody>
-                      Jadi bagian kami
-                      </HeaderSiapaKamiBody>
-                      <ParagraphSiapaKami>
-                      Mari bersama menjadi bagian dari gerakan kami, “Untuk Indonesia setara di bidang teknologi”.
-                      </ParagraphSiapaKami>
+                      <ContentContainer_Mobile>
+                        <img src={SiapaKami_3} style={{ alignSelf:'center', maxHeight:'100%', maxWidth:'100%' }}/>
+                        <HeaderSiapaKamiBody>
+                        Jadi bagian kami
+                        </HeaderSiapaKamiBody>
+                        <ParagraphSiapaKami>
+                        Mari bersama menjadi bagian dari gerakan kami, “Untuk Indonesia setara di bidang teknologi”.
+                        </ParagraphSiapaKami>
+                      </ContentContainer_Mobile>
                   </SiapaKamiContainer_Inner>
               </SiapaKamiContainer_Mobile>
               </SiapaKamiGrid_Mobile>
@@ -229,6 +238,24 @@ const SiapaKamiContainer_Inner = styled.div`
     align-self: center;
 `;
 
+const ContentContainer_Mobile = styled.div`
+  z-index: 0;
+  width: auto !important;
+  max-height: 100% !important;
+  padding: 1vh;
+
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  top: 0;
+  right: 0;
+  left: 0;
+  position: relative;
+  text-align: center;
+
+  margin-bottom: 2vh;
+`;
+
 const HeaderSiapaKamiBody = styled.div`
     margin:0;
     font-size:2em;
@@ -251,18 +278,8 @@ const ParagraphSiapaKami = styled.div`
     color: #111216;
     font-size: 1em;
     font-weight: 200;
-    line-height: 1em;
+    margin-top: 2vh;
     margin-bottom: 0;
-
-    ${mediaqueries.tablet`
-    font-size: 0.8em;
-    line-height: 1.2em;
-    `}
-
-    ${mediaqueries.phone`
-    font-size: 0.6em;
-    line-height: 0.6em;
-    `}
 `;
 
 const EventImageContainer = styled.div`
