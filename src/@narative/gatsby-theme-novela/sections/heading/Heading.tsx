@@ -4,7 +4,7 @@ import styled from '@emotion/styled';
 
 import HeaderSection from '@components/HeaderSection';
 import BodySection from '@components/BodySection';
-import Header_bg from '../../../../assets/Indonesia_Map.svg';
+import Header_bg from '../../../../assets/Indonesia_Map0.svg';
 import Icons from '@icons';
 import mediaqueries from '@styles/media';
 import { IAuthor } from '@types';
