@@ -4,36 +4,18 @@ import styled from '@emotion/styled';
 
 import HeaderSection from '@components/HeaderSection';
 import BodySection from '@components/BodySection';
-import Header_bg from '../../../../assets/Map_blurlinear.png';
+import Header_bg from '../../../../assets/Indonesia_Map0.svg';
 import Icons from '@icons';
 import mediaqueries from '@styles/media';
 import { IAuthor } from '@types';
 
-// const headerQuery = graphql`
-//   {
-//     site: allSite {
-//       edges {
-//         node {
-//           siteMetadata {
-//             hero {
-//               heading
-//               heading_2
-//               maxWidth
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// `;
-
 function Heading() {
-
-  // const results = useStaticQuery(headerQuery);
-  // const hero = results.site.edges[0].node.siteMetadata.hero;
 
   return (
     <BodySection relative id="Headers__Hero">
+      <ImageContainer>
+        <img src={Header_bg} style={{ alignSelf:'center', maxWidth:'100%' }}/>
+      </ImageContainer>
       <HeaderContainerGrid>
         <HeadingContainer 
         style={{ 
@@ -62,9 +44,7 @@ function Heading() {
           </HeadingDescriptionContainer>
         </HeadingContainer>
         <ImageHeaderContainer>
-          <ImageContainer>
-            <img src={Header_bg} style={{ width:'auto', height:'380px', alignSelf:'center' }}/>
-          </ImageContainer>
+          
         </ImageHeaderContainer>
       </HeaderContainerGrid>
     </BodySection>
@@ -108,12 +88,13 @@ const HeadingContainer = styled.div`
 
   ${mediaqueries.tablet`
   width: 100%;
+  padding-top: 20vh;
   `}
 `;
 
 const HeroHeading = styled.h1`
   z-index: 10;
-  margin-top: 20vh;
+  margin-top: 25vh;
   font-style: normal;
   font-weight: 600;
   font-size: 52px;
@@ -129,7 +110,8 @@ const HeroHeading = styled.h1`
   `}
 
   ${mediaqueries.phablet`
-    font-size: 32px;
+    font-size: 28px;
+    margin-top: 10vh;
   `}
 `;
 
@@ -182,7 +164,7 @@ const ImageHeaderContainer = styled.div`
   `}
 
   ${mediaqueries.tablet`
-    display: none;
+    
   `}
 `;
 
@@ -190,12 +172,20 @@ const ImageContainer = styled.div`
   z-index: 0;
   width: auto !important;
   max-height: 100% !important;
-  padding: 1vh;import { BodySection } from '@components/BodySection';
+  padding: 1vh;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
   align-self: center;
-  top: 5%;
-  right: 15%;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin-left: 5%;
+  margin-right: 5%;
   position: absolute;
+  padding-top: 18vh;
 `;
 
 const IconContainer = styled.div`

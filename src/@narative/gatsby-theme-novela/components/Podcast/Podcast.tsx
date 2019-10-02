@@ -1,6 +1,8 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 
+import mediaqueries from '@styles/media';
+
 import BodySection from '@components/BodySection';
 
 function Podcast() {
@@ -60,6 +62,39 @@ const PodcastContainerGrid = styled.div`
     padding: 3vh;
     margin-left: 10%;
     margin-right: 10%;
+
+    ${mediaqueries.desktop`
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    grid-template-columns: 1fr;
+    grid-template-areas: "PodcastContainer_r";
+    width: 100%;
+    margin-left: 0%;
+    margin-right: 0%;
+    `}
+
+    ${mediaqueries.tablet`
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    grid-template-columns: 1fr;
+    width: 100%;
+    margin-left: 0%;
+    margin-right: 0%;
+    `}
+
+    ${mediaqueries.phablet`
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    grid-template-columns: 1fr;
+    width: 100%;
+    margin-left: 0%;
+    margin-right: 0%;
+    `}
+
+    ${mediaqueries.phone`
+    grid-template-columns: 1fr;
+    width: 100%;
+    `}    
 `;
 
 const PodcastHeader = styled.div`
@@ -75,6 +110,24 @@ const PodcastHeader = styled.div`
     padding-left: 17%;
     padding-right: 17%;
     margin-bottom: 5vh;
+
+    ${mediaqueries.desktop`
+    margin-bottom: 80px;
+    `};
+
+    ${mediaqueries.tablet`
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    font-size: 32px;
+    text-align: center;
+    `};
+
+    ${mediaqueries.phablet`
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    font-size: 32px;
+    text-align: center;
+    `};
 `;
 
 const PodcastContainer_l = styled.div`
@@ -94,6 +147,18 @@ const PodcastContainer_r = styled.div`
     -ms-flex-flow: row;
     padding: 2vh;
     align-self: center;
+
+    ${mediaqueries.desktop`
+    display: none;
+    `}
+
+    ${mediaqueries.tablet`
+    display: none;
+    `}
+
+    ${mediaqueries.phone`
+    display: none;
+    `}
 `;
 
 const PodcastContainer_Inner = styled.div`
