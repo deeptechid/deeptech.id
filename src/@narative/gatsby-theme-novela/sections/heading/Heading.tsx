@@ -4,7 +4,7 @@ import styled from '@emotion/styled';
 
 import HeaderSection from '@components/HeaderSection';
 import BodySection from '@components/BodySection';
-import Header_bg from '../../../../assets/Map_blurlinear.png';
+import Header_bg from '../../../../assets/Indonesia_Map.svg';
 import Icons from '@icons';
 import mediaqueries from '@styles/media';
 import { IAuthor } from '@types';
@@ -88,12 +88,13 @@ const HeadingContainer = styled.div`
 
   ${mediaqueries.tablet`
   width: 100%;
+  padding-top: 20vh;
   `}
 `;
 
 const HeroHeading = styled.h1`
   z-index: 10;
-  margin-top: 20vh;
+  margin-top: 25vh;
   font-style: normal;
   font-weight: 600;
   font-size: 52px;
@@ -109,7 +110,8 @@ const HeroHeading = styled.h1`
   `}
 
   ${mediaqueries.phablet`
-    font-size: 32px;
+    font-size: 28px;
+    margin-top: 10vh;
   `}
 `;
 
@@ -180,8 +182,10 @@ const ImageContainer = styled.div`
   top: 0;
   right: 0;
   left: 0;
+  margin-left: 5%;
+  margin-right: 5%;
   position: absolute;
-  padding-bottom: 5vh;
+  padding-top: 18vh;
 `;
 
 const IconContainer = styled.div`
