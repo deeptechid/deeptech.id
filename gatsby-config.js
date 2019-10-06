@@ -42,7 +42,6 @@ module.exports = {
         basePath: "/",
         authorsPage: true,
         sources: {
-          // local: false,
           contentful: true,
         },
       },
