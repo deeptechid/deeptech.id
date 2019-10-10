@@ -90,13 +90,9 @@ function normalizeHero(article) {
       return {
         ...author,
         // social: author.social.map(s => ({ url: s }))
-        social: author.social && author.social.map(s => {
-          if (author.social.length > 0) {
-            return ({ url: s });
-          } else {
-            return ({ url: ['https://www.deeptech.id'] });
-          }
-        }),
+        social: author.social && author.social.map(s => ({
+          url: author.social.length ? s : ['https://www.deeptech.id']
+        })),
         slug: author.fields.slug,
         authorsPage: author.fields.authorsPage,
       };
