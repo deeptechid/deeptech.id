@@ -14,7 +14,7 @@ function Heading() {
   return (
     <BodySection relative id="Headers__Hero">
       <ImageContainer>
-        <img src={Header_bg} style={{ alignSelf:'center', maxWidth:'100%' }}/>
+        <img src={Header_bg} style={{ alignSelf:'center', maxWidth:'100%', height:'100%' }}/>
       </ImageContainer>
       <HeaderContainerGrid>
         <HeadingContainer 
