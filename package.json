@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@narative/gatsby-theme-novela": "^0.*",
-    "dotenv": "^8.1.0",
+    "dotenv": "^8.2.0",
     "gatsby": "^2.13.41",
     "gatsby-plugin-manifest": "^2.2.18",
     "gatsby-source-contentful": "^2.1.48",
