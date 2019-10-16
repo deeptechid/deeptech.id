@@ -9,9 +9,7 @@ import Image, { ImagePlaceholder } from "@components/Image";
 import mediaqueries from "@styles/media";
 import { IArticle } from "@types";
 
-import { GridLayoutContext } from "./Articles.List.Context";
-
-import { graphql, useStaticQuery } from 'gatsby';
+import { GridLayoutContext } from "./Event.List.Context";
 
 /**
  * Tiles
@@ -27,47 +25,19 @@ import { graphql, useStaticQuery } from 'gatsby';
  * [LONG]
  */
 
-const categoryQuery = graphql`
-{
-  site: allSite {
-    edges {
-      node {
-        siteMetadata {
-          hero_blog {
-            category
-          }
-          hero_kegiatan {
-            category
-          }
-        }
-      }
-    }
-  }
-}
-`;
-
 interface ArticlesListProps {
   articles: IArticle[];
   alwaysShowAllDetails?: boolean;
-  category: `Kegiatan`;
 }
 
 interface ArticlesListItemProps {
   article: IArticle;
   narrow?: boolean;
-  category: `Kegiatan`;
 }
 
-function ArticlesList({ articles, alwaysShowAllDetails, category }: ArticlesListProps) {
+function EventList({ articles, alwaysShowAllDetails }: ArticlesListProps) {
   if (!articles) return null;
 
-  const results = useStaticQuery(categoryQuery);
-  console.log(results)
-  console.log(articles)
-  const categoryKegiatan = results.site.edges[0].node.siteMetadata.hero_kegiatan.category;
-  const categoryBlog = results.site.edges[0].node.siteMetadata.hero_blog.category;
-
-  console.log(categoryKegiatan)
   const hasOnlyOneArticle = articles.length === 1;
   const { gridLayout = "tiles", hasSetGridLayout, getGridLayout } = useContext(
     GridLayoutContext,
@@ -96,53 +66,25 @@ function ArticlesList({ articles, alwaysShowAllDetails, category }: ArticlesList
         const isEven = index % 2 !== 0;
         const isOdd = index % 2 !== 1;
 
-        // return (
-        //   <List
-        //     key={index}
-        //     gridLayout={gridLayout}
-        //     hasOnlyOneArticle={hasOnlyOneArticle}
-        //     reverse={isEven}
-        //   > 
-        //     <ListItem article={ap[0]} category={categoryKegiatan} narrow={isEven} />
-        //     <ListItem article={ap[1]} category={categoryKegiatan} narrow={isOdd} />
-        //   </List>
-        // );
-
-        if (categoryKegiatan === 'Kegiatan') {
-          return (
-            <List
-              key={index}
-              gridLayout={gridLayout}
-              hasOnlyOneArticle={hasOnlyOneArticle}
-              reverse={isEven}
-            > 
-              <ListItem article={ap[0]} category={categoryKegiatan} narrow={isEven} />
-              <ListItem article={ap[1]} category={categoryKegiatan} narrow={isOdd} />
-            </List>
-          );
-        }
-
-        if (categoryBlog === 'Blog') {
-          return (
-            <List
-              key={index}
-              gridLayout={gridLayout}
-              hasOnlyOneArticle={hasOnlyOneArticle}
-              reverse={isEven}
-            > 
-              <ListItem article={ap[0]} category={categoryBlog} narrow={isEven} />
-              <ListItem article={ap[1]} category={categoryBlog} narrow={isOdd} />
-            </List>
-          );
-        }
+        return (
+          <List
+            key={index}
+            gridLayout={gridLayout}
+            hasOnlyOneArticle={hasOnlyOneArticle}
+            reverse={isEven}
+          >
+            <ListItem article={ap[0]} narrow={isEven} />
+            <ListItem article={ap[1]} narrow={isOdd} />
+          </List>
+        );
       })}
     </ArticlesListContainer>
   );
 }
 
-export default ArticlesList;
+export default EventList;
 
-const ListItem = ({ article, narrow, category }: ArticlesListItemProps) => {
+const ListItem = ({ article, narrow }: ArticlesListItemProps) => {
   if (!article) return null;
 
   const { gridLayout } = useContext(GridLayoutContext);
@@ -150,8 +92,7 @@ const ListItem = ({ article, narrow, category }: ArticlesListItemProps) => {
   const imageSource = narrow ? article.hero.narrow : article.hero.regular;
   const hasHeroImage = Object.keys(imageSource).length !== 0 && imageSource.constructor === Object;
 
-  if (category === 'Kegiatan') {
-    console.log(category)
+  if (article.category !== `Kegiatan`) {
     return (
       <ArticleLink to={article.slug} data-a11y="false">
         <Item gridLayout={gridLayout}>

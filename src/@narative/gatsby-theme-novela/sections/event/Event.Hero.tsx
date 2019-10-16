@@ -8,7 +8,7 @@ import Icons from '@icons';
 import mediaqueries from '@styles/media';
 import { IAuthor } from '@types';
 
-import { GridLayoutContext } from './Articles.List.Context';
+import { GridLayoutContext } from './Event.List.Context';
 
 const authorQuery = graphql`
   {
@@ -16,7 +16,7 @@ const authorQuery = graphql`
       edges {
         node {
           siteMetadata {
-            hero_blog {
+            hero_kegiatan {
               heading
               maxWidth
               category
@@ -28,16 +28,15 @@ const authorQuery = graphql`
   }
 `;
 
-function ArticlesHero({ authors }: IAuthor) {
+function EventHero({ authors }: IAuthor) {
   const { gridLayout = 'tiles', hasSetGridLayout, setGridLayout } = useContext(
     GridLayoutContext,
   );
 
   const results = useStaticQuery(authorQuery);
-  const hero = results.site.edges[0].node.siteMetadata.hero_blog;
+  const hero = results.site.edges[0].node.siteMetadata.hero_kegiatan;
   const tilesIsActive = hasSetGridLayout && gridLayout === 'tiles';
   const featuredAuthor = authors.find(author => author.featured);
-  const category = results.site.edges[0].node.siteMetadata.hero_blog.category;
 
   if (!featuredAuthor) {
     throw new Error(`
@@ -53,7 +52,6 @@ function ArticlesHero({ authors }: IAuthor) {
       </HeadingContainer> */}
       <SubheadingContainer>
         <HeroHeading dangerouslySetInnerHTML={{ __html: hero.heading }} />
-        {category}
         <GridControlsContainer>
           <GridButton
             onClick={() => setGridLayout('tiles')}
@@ -79,7 +77,7 @@ function ArticlesHero({ authors }: IAuthor) {
   );
 }
 
-export default ArticlesHero;
+export default EventHero;
 
 const SubheadingContainer = styled.div`
   display: flex;

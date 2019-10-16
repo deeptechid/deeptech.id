@@ -8,10 +8,11 @@ const log = (message, section) =>
 const path = require('path');
 const createPaginatedPages = require('gatsby-paginate');
 
-const templatesDirectory = path.resolve(__dirname, '../../src/templates');
+const templatesDirectory = path.resolve(__dirname, '../../templates');
 const templates = {
   articles: path.resolve(templatesDirectory, 'articles.template.tsx'),
   article: path.resolve(templatesDirectory, 'article.template.tsx'),
+  event: path.resolve(templatesDirectory, 'event.template.tsx'),
   author: path.resolve(templatesDirectory, 'author.template.tsx'),
 };
 
@@ -91,7 +92,7 @@ module.exports = async ({ actions: { createPage }, graphql }, themeOptions) => {
 
   if (contentful) {
     try {
-      log('Querying Authors & Aritcles source:', 'Contentful');
+      log('Querying Authors & Aritcles source:', 'Contentful-shadow working');
       const contentfulAuthors = await graphql(query.contentful.authors);
       const contentfulArticles = await graphql(query.contentful.articles);
 
@@ -155,6 +156,7 @@ module.exports = async ({ actions: { createPage }, graphql }, themeOptions) => {
       basePath,
       skip: pageLength,
       limit: pageLength,
+      category: `Blog` || `Kegiatan`,
     },
   });
 
@@ -196,20 +198,41 @@ module.exports = async ({ actions: { createPage }, graphql }, themeOptions) => {
       next = [...next, articlesThatArentSecret[0]];
     if (articlesThatArentSecret.length === 1) next = [];
 
-    createPage({
-      path: article.slug,
-      component: templates.article,
-      context: {
-        article,
-        authors: authorsThatWroteTheArticle,
-        basePath,
-        slug: article.slug,
-        id: article.id,
-        title: article.title,
-        mailchimp,
-        next,
-      },
-    });
+    if (article.category === `Blog`) {
+      createPage({
+        path: article.slug,
+        component: templates.article,
+        context: {
+          article,
+          authors: authorsThatWroteTheArticle,
+          basePath,
+          slug: article.slug,
+          id: article.id,
+          title: article.title,
+          category: article.category,
+          mailchimp,
+          next,
+        },
+      });
+    }
+
+    if (article.category === `Kegiatan`) {
+      createPage({
+        path: article.slug,
+        component: templates.article,
+        context: {
+          article,
+          authors: authorsThatWroteTheArticle,
+          basePath,
+          slug: article.slug,
+          id: article.id,
+          title: article.title,
+          category: article.category,
+          mailchimp,
+          next,
+        },
+      });
+    }
   });
 
   /**

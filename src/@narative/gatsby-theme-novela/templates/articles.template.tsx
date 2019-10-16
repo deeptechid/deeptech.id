@@ -7,8 +7,12 @@ import SEO from "@components/SEO";
 import Layout from "@components/Layout";
 import Paginator from "@components/Navigation/Navigation.Paginator";
 
-import ArticlesHero from "@narative/gatsby-theme-novela/src/sections/articles/Articles.Hero";
-import ArticlesList from "@narative/gatsby-theme-novela/src/sections/articles/Articles.List";
+import ArticlesHero from "../sections/articles/Articles.Hero";
+import ArticlesList from "../sections/articles/Articles.List";
+
+import EventHero from "../sections/event/Event.Hero";
+import EventList from "../sections/event/Event.List";
+
 import Heading from './../sections/heading/Heading';
 import SiapaKami from "../sections/siapakami/Siapa.Kami";
 
@@ -29,7 +33,25 @@ function ArticlesPage({ location, pageContext }) {
       <ArticlesHero authors={authors} />
       
       <Section narrow>
-        <ArticlesList articles={articles} />
+        <ArticlesList articles={articles} authors={authors}/>
+        <ArticlesPaginator show={pageContext.pageCount > 1}>
+          <Paginator {...pageContext} />
+        </ArticlesPaginator>
+      </Section>
+      <ArticlesGradient />
+
+      <EventHero authors={authors} />
+
+      {/* <Section narrow>
+        <Articl articles={articles} />
+        <ArticlesPaginator show={pageContext.pageCount > 1}>
+          <Paginator {...pageContext} />
+        </ArticlesPaginator>
+      </Section>
+      <ArticlesGradient /> */}
+
+      <Section narrow>
+        <EventList articles={articles} authors={authors}/>
         <ArticlesPaginator show={pageContext.pageCount > 1}>
           <Paginator {...pageContext} />
         </ArticlesPaginator>
@@ -62,10 +84,3 @@ const ArticlesGradient = styled.div`
 const ArticlesPaginator = styled.div<{ show: boolean }>`
   ${p => p.show && `margin-top: 95px;`}
 `;
-
-// const Subscontainer = styled.div`
-//   position: relative;
-//   width: 100%;
-//   max-width: 680px;
-//   display: flex;
-// `;
