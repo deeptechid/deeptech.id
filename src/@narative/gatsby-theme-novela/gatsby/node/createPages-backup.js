@@ -94,9 +94,11 @@ module.exports = async ({ actions: { createPage }, graphql }, themeOptions) => {
 
   if (contentful) {
     try {
-      log('Querying Authors & Aritcles source:', 'Contentful-shadow wworking');
+      log('Querying Authors & Aritcles source:', 'Contentful-shadow working');
       const contentfulAuthors = await graphql(query.contentful.authors);
       const contentfulArticles = await graphql(query.contentful.articles);
+      console.log(contentfulArticles)
+      log(contentfulArticles)
 
       dataSources.contentful.authors = contentfulAuthors.data.authors.edges.map(
         normalize.contentful.authors,
@@ -200,20 +202,41 @@ module.exports = async ({ actions: { createPage }, graphql }, themeOptions) => {
       next = [...next, articlesThatArentSecret[0]];
     if (articlesThatArentSecret.length === 1) next = [];
 
-    createPage({
-      path: article.slug,
-      component: templates.article,
-      context: {
-        article,
-        authors: authorsThatWroteTheArticle,
-        basePath,
-        slug: article.slug,
-        id: article.id,
-        title: article.title,
-        mailchimp,
-        next,
-      },
-    });
+    if (article.category === `Blog`) {
+      createPage({
+        path: article.slug,
+        component: templates.article,
+        context: {
+          article,
+          authors: authorsThatWroteTheArticle,
+          basePath,
+          slug: article.slug,
+          id: article.id,
+          title: article.title,
+          category: article.category,
+          mailchimp,
+          next,
+        },
+      });
+    }
+
+    if (article.category === `Kegiatan`) {
+      createPage({
+        path: article.slug,
+        component: templates.article,
+        context: {
+          article,
+          authors: authorsThatWroteTheArticle,
+          basePath,
+          slug: article.slug,
+          id: article.id,
+          title: article.title,
+          category: article.category,
+          mailchimp,
+          next,
+        },
+      });
+    }
   });
 
   /**

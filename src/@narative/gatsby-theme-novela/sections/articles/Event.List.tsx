@@ -9,7 +9,9 @@ import Image, { ImagePlaceholder } from "@components/Image";
 import mediaqueries from "@styles/media";
 import { IArticle } from "@types";
 
-import { GridLayoutContext } from "./Event.List.Context";
+import { GridLayoutContext } from "./Articles.List.Context";
+
+import { graphql, useStaticQuery } from 'gatsby';
 
 /**
  * Tiles
@@ -25,6 +27,20 @@ import { GridLayoutContext } from "./Event.List.Context";
  * [LONG]
  */
 
+const categoryQuery = graphql`
+{
+  # This is the id for getting the category of Blog
+  site: allContentfulCategory(filter: {id: {eq: "459a5a54-7359-5d5a-8639-b473bbaad698"}}) {
+    edges {
+      node {
+        id
+        namaKategori
+      }
+    }
+  }
+}
+`;
+
 interface ArticlesListProps {
   articles: IArticle[];
   alwaysShowAllDetails?: boolean;
@@ -35,9 +51,15 @@ interface ArticlesListItemProps {
   narrow?: boolean;
 }
 
-function EventList({ articles, alwaysShowAllDetails }: ArticlesListProps) {
+function ArticlesList({ articles, alwaysShowAllDetails }: ArticlesListProps) {
   if (!articles) return null;
 
+  const results = useStaticQuery(categoryQuery);
+  console.log(results)
+  console.log(articles)
+  const categoryBlog = results.site.edges[0].node.namaKategori;
+
+  console.log(categoryBlog)
   const hasOnlyOneArticle = articles.length === 1;
   const { gridLayout = "tiles", hasSetGridLayout, getGridLayout } = useContext(
     GridLayoutContext,
@@ -72,7 +94,7 @@ function EventList({ articles, alwaysShowAllDetails }: ArticlesListProps) {
             gridLayout={gridLayout}
             hasOnlyOneArticle={hasOnlyOneArticle}
             reverse={isEven}
-          >
+          > 
             <ListItem article={ap[0]} narrow={isEven} />
             <ListItem article={ap[1]} narrow={isOdd} />
           </List>
@@ -82,17 +104,22 @@ function EventList({ articles, alwaysShowAllDetails }: ArticlesListProps) {
   );
 }
 
-export default EventList;
+export default ArticlesList;
 
 const ListItem = ({ article, narrow }: ArticlesListItemProps) => {
   if (!article) return null;
+  console.log(article)
 
   const { gridLayout } = useContext(GridLayoutContext);
+  const results = useStaticQuery(categoryQuery);
   const hasOverflow = narrow && article.title.length > 35;
   const imageSource = narrow ? article.hero.narrow : article.hero.regular;
   const hasHeroImage = Object.keys(imageSource).length !== 0 && imageSource.constructor === Object;
+  const category = article.category.namaKategori;
+  const categoryKegiatan = results.site.edges[0].node.namaKategori;
+  console.log(category)
 
-  if (article.category !== `Kegiatan`) {
+  if (category === 'Kegiatan') {
     return (
       <ArticleLink to={article.slug} data-a11y="false">
         <Item gridLayout={gridLayout}>

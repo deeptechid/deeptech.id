@@ -42,7 +42,7 @@ function Article({ pageContext, location }) {
   const results = useStaticQuery(siteQuery);
   const name = results.allSite.edges[0].node.siteMetadata.name;
 
-  const { article, authors, mailchimp, next, category } = pageContext;
+  const { article, authors, mailchimp, next } = pageContext;
 
   useEffect(() => {
     const calculateBodySize = throttle(() => {
@@ -81,7 +81,7 @@ function Article({ pageContext, location }) {
   return (
     <Layout>
       <ArticleSEO article={article} authors={authors} location={location} />
-      <ArticleHero article={article} authors={authors} category={category}/>
+      <ArticleHero article={article} authors={authors}/>
       <ArticleAside contentHeight={contentHeight}>
         <Progress contentHeight={contentHeight} />
       </ArticleAside>
@@ -89,7 +89,7 @@ function Article({ pageContext, location }) {
         <ArticleControls />
       </MobileControls>
       <ArticleBody ref={contentSectionRef}>
-        <MDXRenderer content={article.body} category={category}>
+        <MDXRenderer content={article.body}>
           <ArticleShare />
         </MDXRenderer>
       </ArticleBody>

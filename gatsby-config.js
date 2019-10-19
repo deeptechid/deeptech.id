@@ -13,11 +13,13 @@ module.exports = {
     hero_blog: {
       heading: `Berbagai blog teknologi kami`,
       maxWidth: 788,
+      // category for later use
       category: `Blog`, 
     },
     hero_kegiatan: {
       heading: `Berbagai kegiatan kami`,
       maxWidth: 788,
+      // category for later use
       category: `Kegiatan`, 
     },
     social: [

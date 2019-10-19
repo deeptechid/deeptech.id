@@ -10,8 +10,8 @@ import Paginator from "@components/Navigation/Navigation.Paginator";
 import ArticlesHero from "../sections/articles/Articles.Hero";
 import ArticlesList from "../sections/articles/Articles.List";
 
-import EventHero from "../sections/event/Event.Hero";
-import EventList from "../sections/event/Event.List";
+import EventHero from "../sections/articles/Event.Hero";
+import EventList from "../sections/articles/Event.List";
 
 import Heading from './../sections/heading/Heading';
 import SiapaKami from "../sections/siapakami/Siapa.Kami";

@@ -19,7 +19,6 @@ const authorQuery = graphql`
             hero_blog {
               heading
               maxWidth
-              category
             }
           }
         }

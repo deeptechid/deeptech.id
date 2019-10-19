@@ -135,11 +135,5 @@ module.exports = ({ node, actions, getNode, createNodeId }, themeOptions) => {
       name: `authorsPage`,
       value: themeOptions.authorsPage || false,
     });
-
-    createNodeField({
-      node,
-      name: `category`,
-      value: generateSlug(basePath, 'category', slugify(node.name)),
-    });
   }
 };

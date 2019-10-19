@@ -103,12 +103,11 @@ module.exports.contentful = {
               body
               timeToRead
             }
-            category
           }
           excerpt
           title
           category {
-            slug
+            namaKategori
           }
           slug
           secret

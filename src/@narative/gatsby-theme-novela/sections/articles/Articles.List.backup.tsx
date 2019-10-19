@@ -116,7 +116,6 @@ const ListItem = ({ article, narrow }: ArticlesListItemProps) => {
   const imageSource = narrow ? article.hero.narrow : article.hero.regular;
   const hasHeroImage = Object.keys(imageSource).length !== 0 && imageSource.constructor === Object;
   const category = article.category.namaKategori;
-  const categoryBlog = results.site.edges[0].node.namaKategori;
   console.log(category)
 
   if (category === 'Blog') {
