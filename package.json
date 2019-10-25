@@ -6,7 +6,8 @@
   "scripts": {
     "build": "gatsby build",
     "dev": "gatsby develop",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "deploy:github": "npm run build && node ./scripts/deploy-github"
   },
   "dependencies": {
     "@narative/gatsby-theme-novela": "^0.*",
@@ -14,6 +15,7 @@
     "gatsby": "^2.13.41",
     "gatsby-plugin-manifest": "^2.2.18",
     "gatsby-source-contentful": "^2.1.42",
+    "gh-pages": "^2.1.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   }

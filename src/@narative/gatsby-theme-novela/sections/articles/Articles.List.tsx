@@ -15,8 +15,8 @@ import { graphql, useStaticQuery } from 'gatsby';
 
 /**
  * Tiles
- * [LONG], [SHORT]
  * [SHORT], [LONG]
+ * [LONG], [SHORT]
  * [SHORT], [LONG]
  *
  * or ------------
@@ -111,12 +111,10 @@ const ListItem = ({ article, narrow }: ArticlesListItemProps) => {
   console.log(article)
 
   const { gridLayout } = useContext(GridLayoutContext);
-  const results = useStaticQuery(categoryQuery);
   const hasOverflow = narrow && article.title.length > 35;
   const imageSource = narrow ? article.hero.narrow : article.hero.regular;
   const hasHeroImage = Object.keys(imageSource).length !== 0 && imageSource.constructor === Object;
   const category = article.category.namaKategori;
-  const categoryBlog = results.site.edges[0].node.namaKategori;
   console.log(category)
 
   if (category === 'Blog') {

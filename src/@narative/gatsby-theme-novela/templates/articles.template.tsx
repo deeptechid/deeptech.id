@@ -30,6 +30,17 @@ function ArticlesPage({ location, pageContext }) {
       <SEO pathname={location.pathname} />
       <Heading />
       <SiapaKami />
+
+      <EventHero authors={authors} />
+
+      <Section narrow>
+        <EventList articles={articles} authors={authors}/>
+        <ArticlesPaginator show={pageContext.pageCount > 1}>
+          <Paginator {...pageContext} />
+        </ArticlesPaginator>
+      </Section>
+      <ArticlesGradient />
+
       <ArticlesHero authors={authors} />
       
       <Section narrow>
@@ -40,23 +51,7 @@ function ArticlesPage({ location, pageContext }) {
       </Section>
       <ArticlesGradient />
 
-      <EventHero authors={authors} />
-
-      {/* <Section narrow>
-        <Articl articles={articles} />
-        <ArticlesPaginator show={pageContext.pageCount > 1}>
-          <Paginator {...pageContext} />
-        </ArticlesPaginator>
-      </Section>
-      <ArticlesGradient /> */}
-
-      <Section narrow>
-        <EventList articles={articles} authors={authors}/>
-        <ArticlesPaginator show={pageContext.pageCount > 1}>
-          <Paginator {...pageContext} />
-        </ArticlesPaginator>
-      </Section>
-      <ArticlesGradient />
+      
 
       <Podcast />
 
