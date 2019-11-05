@@ -6693,10 +6693,10 @@ gatsby-remark-typescript@^0.0.12:
     prettier "^1.18.2"
     unist-util-visit "^1.4.1"
 
-gatsby-source-contentful@^2.1.54:
-  version "2.1.54"
-  resolved "https://registry.yarnpkg.com/gatsby-source-contentful/-/gatsby-source-contentful-2.1.54.tgz#9c86cedb6bfa811d78b7eb149e210f456423171c"
-  integrity sha512-KlCSysZ/QtSPW0VjwMal8d6MPVzBXCF1L6Rr1joK60jMtLPMOBeLHishJgbYUQnPtKFzyFMcPlH9Nb6Gzu0qPQ==
+gatsby-source-contentful@^2.1.55:
+  version "2.1.55"
+  resolved "https://registry.yarnpkg.com/gatsby-source-contentful/-/gatsby-source-contentful-2.1.55.tgz#6ef7f139ed7cc3477634929253a4c71e9b6beec5"
+  integrity sha512-3sV7iKlw9f5E9XWxZ8/pj47pR/yt9VlTc1PHksQKrFNgbnutU9meFBrIVnteXZDzFgwKLRB6DjTMOJXe6Azhig==
   dependencies:
     "@babel/runtime" "^7.6.3"
     "@hapi/joi" "^15.1.1"
