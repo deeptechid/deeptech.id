@@ -3,11 +3,12 @@ import styled from "@emotion/styled";
 import { css } from "@emotion/core";
 import { Link } from "gatsby";
 
-import Headings from "@components/Headings";
-import Image, { ImagePlaceholder } from "@components/Image";
+import Headings from "@narative/gatsby-theme-novela/src/components/Headings/Headings";
+import Image from "@narative/gatsby-theme-novela/src/components/Image/Image";
+import ImagePlaceholder from "@narative/gatsby-theme-novela/src/components/Image/Image.Placeholder";
 
-import mediaqueries from "@styles/media";
-import { IArticle } from "@types";
+import mediaqueries from "@narative/gatsby-theme-novela/src/styles/media";
+import { IArticle } from "@narative/gatsby-theme-novela/src/types";
 
 import { GridLayoutContext } from "./Articles.List.Context";
 
@@ -40,7 +41,7 @@ function ArticlesList({ articles, alwaysShowAllDetails }: ArticlesListProps) {
 
   const hasOnlyOneArticle = articles.length === 1;
   const { gridLayout = "tiles", hasSetGridLayout, getGridLayout } = useContext(
-    GridLayoutContext,
+    GridLayoutContext
   );
 
   /**

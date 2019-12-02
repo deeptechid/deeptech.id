@@ -1,1 +1,1 @@
-export { default } from '@components/Podcast/Podcast'
+export { default } from "./Podcast";

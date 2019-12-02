@@ -1,27 +1,25 @@
-/* eslint-disable no-console, import/no-extraneous-dependencies, prefer-const, no-shadow */
-
-require('dotenv').config();
+require("dotenv").config();
 
 const log = (message, section) =>
   console.log(`\n\u001B[36m${message} \u001B[4m${section}\u001B[0m\u001B[0m\n`);
 
-const path = require('path');
-const createPaginatedPages = require('gatsby-paginate');
+const path = require("path");
+const createPaginatedPages = require("gatsby-paginate");
 
-const templatesDirectory = path.resolve(__dirname, '../../src/templates');
+const templatesDirectory = path.resolve(__dirname, "../../src/templates");
 const templates = {
-  articles: path.resolve(templatesDirectory, 'articles.template.tsx'),
-  article: path.resolve(templatesDirectory, 'article.template.tsx'),
-  author: path.resolve(templatesDirectory, 'author.template.tsx'),
+  articles: path.resolve(templatesDirectory, "articles.template.tsx"),
+  article: path.resolve(templatesDirectory, "article.template.tsx"),
+  author: path.resolve(templatesDirectory, "author.template.tsx")
 };
 
-const query = require('../data/data.query');
-const normalize = require('../data/data.normalize');
+const query = require("../data/data.query");
+const normalize = require("../data/data.normalize");
 
 // ///////////////// Utility functions ///////////////////
 
 function buildPaginatedPath(index, basePath) {
-  if (basePath === '/') {
+  if (basePath === "/") {
     return index > 1 ? `${basePath}page/${index}` : basePath;
   }
   return index > 1 ? `${basePath}/page/${index}` : basePath;
@@ -30,12 +28,12 @@ function buildPaginatedPath(index, basePath) {
 function slugify(string, base) {
   const slug = string
     .toLowerCase()
-    .normalize('NFD')
-    .replace(/[\u0300-\u036F]/g, '')
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/(^-|-$)+/g, '');
+    .normalize("NFD")
+    .replace(/[\u0300-\u036F]/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)+/g, "");
 
-  return `${base}/${slug}`.replace(/\/\/+/g, '/');
+  return `${base}/${slug}`.replace(/\/\/+/g, "/");
 }
 
 function getUniqueListBy(array, key) {
@@ -48,12 +46,12 @@ const byDate = (a, b) => new Date(b.dateForSEO) - new Date(a.dateForSEO);
 
 module.exports = async ({ actions: { createPage }, graphql }, themeOptions) => {
   const {
-    basePath = '/',
-    authorsPath = '/authors',
+    basePath = "/",
+    authorsPath = "/authors",
     authorsPage = true,
     pageLength = 6,
     sources = {},
-    mailchimp = '',
+    mailchimp = ""
   } = themeOptions;
 
   // Defaulting to look at the local MDX files as sources.
@@ -65,24 +63,24 @@ module.exports = async ({ actions: { createPage }, graphql }, themeOptions) => {
   const dataSources = {
     local: { authors: [], articles: [] },
     contentful: { authors: [], articles: [] },
-    netlify: { authors: [], articles: [] },
+    netlify: { authors: [], articles: [] }
   };
 
-  log('Config basePath', basePath);
-  if (authorsPage) log('Config authorsPath', authorsPath);
+  log("Config basePath", basePath);
+  if (authorsPage) log("Config authorsPath", authorsPath);
 
   if (local) {
     try {
-      log('Querying Authors & Aritcles source:', 'Local');
+      log("Querying Authors & Aritcles source:", "Local");
       const localAuthors = await graphql(query.local.authors);
       const localArticles = await graphql(query.local.articles);
 
       dataSources.local.authors = localAuthors.data.authors.edges.map(
-        normalize.local.authors,
+        normalize.local.authors
       );
 
       dataSources.local.articles = localArticles.data.articles.edges.map(
-        normalize.local.articles,
+        normalize.local.articles
       );
     } catch (error) {
       console.error(error);
@@ -91,16 +89,16 @@ module.exports = async ({ actions: { createPage }, graphql }, themeOptions) => {
 
   if (contentful) {
     try {
-      log('Querying Authors & Aritcles source:', 'Contentful');
+      log("Querying Authors & Aritcles source:", "Contentful");
       const contentfulAuthors = await graphql(query.contentful.authors);
       const contentfulArticles = await graphql(query.contentful.articles);
 
       dataSources.contentful.authors = contentfulAuthors.data.authors.edges.map(
-        normalize.contentful.authors,
+        normalize.contentful.authors
       );
 
       dataSources.contentful.articles = contentfulArticles.data.articles.edges.map(
-        normalize.contentful.articles,
+        normalize.contentful.articles
       );
     } catch (error) {
       console.error(error);
@@ -111,7 +109,7 @@ module.exports = async ({ actions: { createPage }, graphql }, themeOptions) => {
   articles = [
     ...dataSources.local.articles,
     ...dataSources.contentful.articles,
-    ...dataSources.netlify.articles,
+    ...dataSources.netlify.articles
   ].sort(byDate);
 
   const articlesThatArentSecret = articles.filter(article => !article.secret);
@@ -121,9 +119,9 @@ module.exports = async ({ actions: { createPage }, graphql }, themeOptions) => {
     [
       ...dataSources.local.authors,
       ...dataSources.contentful.authors,
-      ...dataSources.netlify.authors,
+      ...dataSources.netlify.authors
     ],
-    'name',
+    "name"
   );
 
   if (articles.length === 0 || authors.length === 0) {
@@ -142,7 +140,7 @@ module.exports = async ({ actions: { createPage }, graphql }, themeOptions) => {
    * /articles/page/1
    * ...
    */
-  log('Creating', 'articles page');
+  log("Creating", "articles page");
   createPaginatedPages({
     edges: articlesThatArentSecret,
     pathPrefix: basePath,
@@ -154,22 +152,22 @@ module.exports = async ({ actions: { createPage }, graphql }, themeOptions) => {
       authors,
       basePath,
       skip: pageLength,
-      limit: pageLength,
-    },
+      limit: pageLength
+    }
   });
 
   /**
    * Once the list of articles have bene created, we need to make individual article posts.
    * To do this, we need to find the corresponding authors since we allow for co-authors.
    */
-  log('Creating', 'article posts');
+  log("Creating", "article posts");
   articles.forEach((article, index) => {
     // Match the Author to the one specified in the article
     let authorsThatWroteTheArticle;
     try {
       authorsThatWroteTheArticle = authors.filter(author => {
         const allAuthors = article.author
-          .split(',')
+          .split(",")
           .map(a => a.trim().toLowerCase());
 
         return allAuthors.some(a => a === author.name.toLowerCase());
@@ -207,8 +205,8 @@ module.exports = async ({ actions: { createPage }, graphql }, themeOptions) => {
         id: article.id,
         title: article.title,
         mailchimp,
-        next,
-      },
+        next
+      }
     });
   });
 
@@ -217,12 +215,12 @@ module.exports = async ({ actions: { createPage }, graphql }, themeOptions) => {
    * If enabled, each author will get their own page and a list of the articles they have written.
    */
   if (authorsPage) {
-    log('Creating', 'authors page');
+    log("Creating", "authors page");
 
     authors.forEach(author => {
       const articlesTheAuthorHasWritten = articlesThatArentSecret.filter(
         article =>
-          article.author.toLowerCase().includes(author.name.toLowerCase()),
+          article.author.toLowerCase().includes(author.name.toLowerCase())
       );
       const path = slugify(author.slug, authorsPath);
 
@@ -237,8 +235,8 @@ module.exports = async ({ actions: { createPage }, graphql }, themeOptions) => {
           author,
           originalPath: path,
           skip: pageLength,
-          limit: pageLength,
-        },
+          limit: pageLength
+        }
       });
     });
   }

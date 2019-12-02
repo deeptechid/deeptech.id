@@ -8,7 +8,7 @@ export const GridLayoutContext = createContext({
   gridLayout: "tiles",
   hasSetGridLayout: false,
   setGridLayout: (tile: string) => {},
-  getGridLayout: () => {},
+  getGridLayout: () => {}
 });
 
 function GridLayoutProvider({ children }: GridLayoutProviderProps) {
@@ -33,7 +33,7 @@ function GridLayoutProvider({ children }: GridLayoutProviderProps) {
         gridLayout,
         hasSetGridLayout,
         setGridLayout: setGridLayoutAndSave,
-        getGridLayout: getGridLayoutAndSave,
+        getGridLayout: getGridLayoutAndSave
       }}
     >
       {children}
