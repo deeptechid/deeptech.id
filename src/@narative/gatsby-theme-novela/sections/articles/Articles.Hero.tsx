@@ -45,9 +45,6 @@ function ArticlesHero({ authors }: IAuthor) {
 
   return (
     <Section relative id="Articles__Hero">
-      {/* <HeadingContainer style={{ maxWidth: `${hero.maxWidth}px` }}>
-        <Bio author={featuredAuthor} />
-      </HeadingContainer> */}
       <SubheadingContainer>
         <HeroHeading dangerouslySetInnerHTML={{ __html: hero.heading }} />
         <GridControlsContainer>
