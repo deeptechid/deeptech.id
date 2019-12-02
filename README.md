@@ -58,6 +58,7 @@ If everything is fine, you should run
 
 - Important to use tab with two space setting
 - Always run `yarn format` and `yarn lint`
+- Any pull request must follow `MERGE_REQUEST.md` guideline template
 
 ## Branch Conventions
 
