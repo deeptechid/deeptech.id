@@ -1,22 +1,12 @@
-import React, { useContext } from "react";
-import { graphql, useStaticQuery } from "gatsby";
+import React from "react";
 import styled from "@emotion/styled";
-
-import HeaderSection from "@components/HeaderSection";
-import BodySection from "@components/BodySection";
-
-import mediaqueries from "@styles/media";
-
+import BodySection from "../../components/BodySection/BodySection";
+import mediaqueries from "@narative/gatsby-theme-novela/src/styles/media";
 import SiapaKami_1 from "../../../../assets/SiapaKami_1.png";
 import SiapaKami_2 from "../../../../assets/SiapaKami_2.png";
 import SiapaKami_3 from "../../../../assets/SiapaKami_3.png";
 
-import Icons from "@icons";
-
 function SiapaKami() {
-  //   const results = useStaticQuery(siapaKami);
-  //   const hero = results.site.edges[0].node.siteMetadata.siapakami;
-
   return (
     <BodySection relative id="SiapaKami__Hero">
       <div>
