@@ -3,12 +3,11 @@ import styled from "@emotion/styled";
 import { css } from "@emotion/core";
 import { Link } from "gatsby";
 
-import Headings from "@narative/gatsby-theme-novela/src/components/Headings/Headings";
-import Image from "@narative/gatsby-theme-novela/src/components/Image/Image";
-import ImagePlaceholder from "@narative/gatsby-theme-novela/src/components/Image/Image.Placeholder";
+import Headings from "@components/Headings";
+import Image, { ImagePlaceholder } from "@components/Image";
 
-import mediaqueries from "@narative/gatsby-theme-novela/src/styles/media";
-import { IArticle } from "@narative/gatsby-theme-novela/src/types";
+import mediaqueries from "@styles/media";
+import { IArticle } from "@types";
 
 import { GridLayoutContext } from "./Articles.List.Context";
 
@@ -16,8 +15,8 @@ import { graphql, useStaticQuery } from 'gatsby';
 
 /**
  * Tiles
- * [SHORT], [LONG]
  * [LONG], [SHORT]
+ * [SHORT], [LONG]
  * [SHORT], [LONG]
  *
  * or ------------
@@ -63,7 +62,7 @@ function ArticlesList({ articles, alwaysShowAllDetails }: ArticlesListProps) {
   console.log(categoryBlog)
   const hasOnlyOneArticle = articles.length === 1;
   const { gridLayout = "tiles", hasSetGridLayout, getGridLayout } = useContext(
-    GridLayoutContext
+    GridLayoutContext,
   );
 
   /**
@@ -112,6 +111,7 @@ const ListItem = ({ article, narrow }: ArticlesListItemProps) => {
   console.log(article)
 
   const { gridLayout } = useContext(GridLayoutContext);
+  const results = useStaticQuery(categoryQuery);
   const hasOverflow = narrow && article.title.length > 35;
   const imageSource = narrow ? article.hero.narrow : article.hero.regular;
   const hasHeroImage = Object.keys(imageSource).length !== 0 && imageSource.constructor === Object;

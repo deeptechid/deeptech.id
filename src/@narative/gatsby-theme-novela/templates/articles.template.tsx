@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "@emotion/styled";
-
 import Section from "@narative/gatsby-theme-novela/src/components/Section/Section";
 import SEO from "@narative/gatsby-theme-novela/src/components/SEO/SEO";
 import Layout from "@narative/gatsby-theme-novela/src/components/Layout/Layout";
@@ -20,14 +19,27 @@ function ArticlesPage({ location, pageContext }) {
       <SEO title="articles" pathname={location.pathname} />
       <Heading />
       <SiapaKami />
-      <ArticlesHero authors={authors} />
+
+      <EventHero authors={authors} />
 
       <Section narrow>
-        <ArticlesList articles={articles} />
+        <EventList articles={articles} authors={authors}/>
         <ArticlesPaginator show={pageContext.pageCount > 1}>
           <Paginator {...pageContext} />
         </ArticlesPaginator>
       </Section>
+      <ArticlesGradient />
+
+      <ArticlesHero authors={authors} />
+
+      <Section narrow>
+        <ArticlesList articles={articles} authors={authors}/>
+        <ArticlesPaginator show={pageContext.pageCount > 1}>
+          <Paginator {...pageContext} />
+        </ArticlesPaginator>
+      </Section>
+
+      
 
       <Podcast />
 
