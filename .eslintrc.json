@@ -9,15 +9,13 @@
   ],
   "rules": {
     "react/prop-types": 0,
-    "no-console": "warn",
-    "react-hooks/rules-of-hooks": "error"
+    "no-console": "warn"
   },
-  "plugins": ["react-hooks"],
   "parserOptions": {
     "ecmaVersion": 2018,
     "sourceType": "module",
     "ecmaFeatures": {
-      "jsx": true
+      "tsx": true
     }
   },
   "env": {
