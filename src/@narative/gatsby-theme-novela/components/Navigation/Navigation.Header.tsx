@@ -3,16 +3,16 @@ import styled from "@emotion/styled";
 import { Link, navigate } from "gatsby";
 import { useColorMode } from "theme-ui";
 
-import Section from "@components/Section";
-import Logo from "@components/Logo";
+import Section from "@narative/gatsby-theme-novela/src/components/Section/Section";
+import Logo from "../Logo/Logo";
 
-import Icons from "@icons";
-import mediaqueries from "@styles/media";
+import Icons from "@narative/gatsby-theme-novela/src/icons";
+import mediaqueries from "@narative/gatsby-theme-novela/src/styles/media";
 import {
   copyToClipboard,
   getWindowDimensions,
-  getBreakpointFromTheme,
-} from "@utils";
+  getBreakpointFromTheme
+} from "@narative/gatsby-theme-novela/src/utils";
 
 function NavigationHeader() {
   const [showBackArrow, setShowBackArrow] = useState<boolean>(false);
@@ -31,7 +31,7 @@ function NavigationHeader() {
     const isNotPaginated = !location.pathname.includes("/page/");
 
     setShowBackArrow(
-      previousPathWasHomepage && isNotPaginated && width <= phablet,
+      previousPathWasHomepage && isNotPaginated && width <= phablet
     );
     setPreviousPath(prev);
   }, []);

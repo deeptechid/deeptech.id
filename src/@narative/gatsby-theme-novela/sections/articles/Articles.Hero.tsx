@@ -1,14 +1,13 @@
-import React, { useContext } from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
-import styled from '@emotion/styled';
+import React, { useContext } from "react";
+import { graphql, useStaticQuery } from "gatsby";
+import styled from "@emotion/styled";
 
-import Section from '@components/Section';
-import Bio from '@components/Bio';
-import Icons from '@icons';
-import mediaqueries from '@styles/media';
-import { IAuthor } from '@types';
+import Section from "@narative/gatsby-theme-novela/src/components/Section/Section";
+import Icons from "@narative/gatsby-theme-novela/src/icons";
+import mediaqueries from "@narative/gatsby-theme-novela/src/styles/media";
+import { IAuthor } from "@narative/gatsby-theme-novela/src/types";
 
-import { GridLayoutContext } from './Articles.List.Context';
+import { GridLayoutContext } from "./Articles.List.Context";
 
 const authorQuery = graphql`
   {
@@ -28,13 +27,13 @@ const authorQuery = graphql`
 `;
 
 function ArticlesHero({ authors }: IAuthor) {
-  const { gridLayout = 'tiles', hasSetGridLayout, setGridLayout } = useContext(
-    GridLayoutContext,
+  const { gridLayout = "tiles", hasSetGridLayout, setGridLayout } = useContext(
+    GridLayoutContext
   );
 
   const results = useStaticQuery(authorQuery);
   const hero = results.site.edges[0].node.siteMetadata.hero;
-  const tilesIsActive = hasSetGridLayout && gridLayout === 'tiles';
+  const tilesIsActive = hasSetGridLayout && gridLayout === "tiles";
   const featuredAuthor = authors.find(author => author.featured);
 
   if (!featuredAuthor) {
@@ -46,14 +45,11 @@ function ArticlesHero({ authors }: IAuthor) {
 
   return (
     <Section relative id="Articles__Hero">
-      {/* <HeadingContainer style={{ maxWidth: `${hero.maxWidth}px` }}>
-        <Bio author={featuredAuthor} />
-      </HeadingContainer> */}
       <SubheadingContainer>
         <HeroHeading dangerouslySetInnerHTML={{ __html: hero.heading }} />
         <GridControlsContainer>
           <GridButton
-            onClick={() => setGridLayout('tiles')}
+            onClick={() => setGridLayout("tiles")}
             active={tilesIsActive}
             data-a11y="false"
             title="Show articles in Tile grid"
@@ -62,7 +58,7 @@ function ArticlesHero({ authors }: IAuthor) {
             <Icons.Tiles />
           </GridButton>
           <GridButton
-            onClick={() => setGridLayout('rows')}
+            onClick={() => setGridLayout("rows")}
             active={!tilesIsActive}
             data-a11y="false"
             title="Show articles in Row grid"
@@ -153,8 +149,8 @@ const GridButton = styled.button<{ active: boolean }>`
     background: ${p => p.theme.colors.hover};
   }
 
-  &[data-a11y='true']:focus::after {
-    content: '';
+  &[data-a11y="true"]:focus::after {
+    content: "";
     position: absolute;
     left: -10%;
     top: -10%;
