@@ -17,7 +17,7 @@ function ArticlesPage({ location, pageContext }) {
 
   return (
     <Layout>
-      <SEO title="articles" pathname={location.pathname} />
+      <SEO title="DeepTech" pathname={location.pathname} />
       <Heading />
       <SiapaKami />
       <ArticlesHero authors={authors} />
@@ -30,7 +30,6 @@ function ArticlesPage({ location, pageContext }) {
       </Section>
 
       <Podcast />
-
     </Layout>
   );
 }

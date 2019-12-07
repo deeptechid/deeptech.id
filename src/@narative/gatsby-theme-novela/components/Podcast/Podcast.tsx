@@ -19,7 +19,7 @@ function Podcast() {
               src="https://open.spotify.com/embed-podcast/episode/2iwmgi3FfASMhgSs8SYbHN"
               width="100%"
               height="232"
-              frameborder="0"
+              frameBorder="0"
               allowtransparency="true"
               allow="encrypted-media"
             ></iframe>
