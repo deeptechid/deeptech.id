@@ -1,4 +1,4 @@
-require('dotenv').config();
+require("dotenv").config();
 
 module.exports = {
   siteMetadata: {
@@ -8,30 +8,22 @@ module.exports = {
     description: `Knowledge sharing, meaningful networking, self-improvement & transformation.`,
     hero: {
       heading: `Berbagai update teknologi dan kegiatan kami`,
-      maxWidth: 788,
+      maxWidth: 788
     },
     social: [
-      // {
-      //   name: `twitter`,
-      //   url: `https://twitter.com/narative`,
-      // },
       {
         name: `github`,
-        url: `https://github.com/deeptechid`,
+        url: `https://github.com/deeptechid`
       },
       {
         name: `instagram`,
-        url: `https://instagram.com/deeptech.id`,
+        url: `https://instagram.com/deeptech.id`
       },
       {
         name: `linkedin`,
-        url: `https://www.linkedin.com/company/deep-tech-id`,
-      },
-      // {
-      //   name: `dribbble`,
-      //   url: `https://dribbble.com/narativestudio`,
-      // },
-    ],
+        url: `https://www.linkedin.com/company/deep-tech-id`
+      }
+    ]
   },
   plugins: [
     {
@@ -42,17 +34,17 @@ module.exports = {
         basePath: "/",
         authorsPage: true,
         sources: {
-          contentful: true,
-        },
-      },
+          contentful: true
+        }
+      }
     },
     {
-      resolve: 'gatsby-source-contentful',
+      resolve: "gatsby-source-contentful",
       options: {
         spaceId: process.env.CONTENTFUL_SPACE_ID,
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-        environment: process.env.CONTENTFUL_ENV,
-      },
+        environment: process.env.CONTENTFUL_ENV
+      }
     },
     {
       resolve: `gatsby-plugin-manifest`,
@@ -63,8 +55,8 @@ module.exports = {
         background_color: `#fff`,
         theme_color: `#fff`,
         display: `standalone`,
-        icon: `src/assets/favicon.png`,
-      },
-    },
-  ],
+        icon: `src/assets/favicon.png`
+      }
+    }
+  ]
 };
