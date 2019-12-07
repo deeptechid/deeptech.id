@@ -80,11 +80,10 @@ function useScript(src) {
 }
 
 const BlogHeader = styled.div`
-  display: inline-block;
-  width: 1000px;
+  width: 100%;
   text-align: center;
   padding: 1vh;
-  display: -ms-flex;
+  display: inline-block;
   align-items: center;
   color: #111216;
   font-size: 36px;
