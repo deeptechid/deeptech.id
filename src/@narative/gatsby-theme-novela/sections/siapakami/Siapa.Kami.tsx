@@ -146,7 +146,7 @@ export default SiapaKami;
 
 // SiapaKami Section
 const SiapaKamiContainer = styled.div`
-  width: 75%;
+  width: 100%;
   height: auto;
   text-align: left;
   margin: auto;
