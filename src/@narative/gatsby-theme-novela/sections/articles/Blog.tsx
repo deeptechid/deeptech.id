@@ -8,7 +8,9 @@ function Blog() {
   );
   return (
     <BlogContainer>
-      <BlogHeader>Ikuti Terus Blog Kita Di Kanal Medium</BlogHeader>
+      <BlogHeader>
+        Ikuti berbagai perkembangan teknologi dari para pujangga teknologi kami
+      </BlogHeader>
       <div id="medium-widget"></div>
     </BlogContainer>
   );
