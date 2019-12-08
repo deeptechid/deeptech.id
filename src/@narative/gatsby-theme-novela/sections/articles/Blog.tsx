@@ -8,9 +8,12 @@ function Blog() {
   );
   return (
     <BlogContainer>
-      <BlogHeader>
-        Ikuti berbagai perkembangan teknologi dari para pujangga teknologi kami
-      </BlogHeader>
+      <SubheadingContainer>
+        <BlogHeader>
+          Ikuti berbagai perkembangan teknologi dari para pujangga teknologi
+          kami
+        </BlogHeader>
+      </SubheadingContainer>
       <div id="medium-widget"></div>
     </BlogContainer>
   );
@@ -83,15 +86,12 @@ function useScript(src) {
 
 const BlogHeader = styled.div`
   width: 100%;
-  text-align: center;
-  padding: 1vh;
+  text-align: left;
   display: inline-block;
   align-items: center;
   color: #111216;
   font-size: 36px;
   font-weight: 600;
-  padding-left: 17%;
-  padding-right: 17%;
   margin-bottom: 5vh;
 
   ${mediaqueries.desktop`
@@ -111,6 +111,32 @@ const BlogHeader = styled.div`
     font-size: 32px;
     text-align: center;
     `};
+`;
+
+const SubheadingContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  ${mediaqueries.desktop`
+    margin-bottom: 80px;
+  `};
+
+  ${mediaqueries.tablet`
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 60px;
+    font-size: 0.6em;
+    text-align: center;
+  `};
+
+  ${mediaqueries.phablet`
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 60px;
+    font-size: 0.6em;
+    text-align: center;
+  `};
 `;
 
 const BlogContainer = styled.div`
