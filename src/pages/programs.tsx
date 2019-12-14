@@ -48,7 +48,7 @@ function Programs() {
       <Section>
         <Container>
           <Card>
-            <div style={{ width: "50%", padding: "80px" }}>
+            <CardContent>
               <HeroHeading style={{ color: "#fff" }}>
                 Podcast KodeNol
               </HeroHeading>
@@ -57,17 +57,10 @@ function Programs() {
                 memberdayakan orang-orang dengan keterampilan teknologi dan
                 untuk transformasi digital di Indonesia.
               </Paragraph>
-            </div>
-            <div style={{ width: "50%" }}>
-              <img
-                src="https://get-thrive.app/assets/images/goals-1.jpg"
-                style={{
-                  borderRadius: "0 24px 24px 0",
-                  width: "100%",
-                  height: "100%"
-                }}
-              ></img>
-            </div>
+            </CardContent>
+            <CardContent style={{ padding: "0" }}>
+              <ImageCardContent src="https://get-thrive.app/assets/images/goals-1.jpg"></ImageCardContent>
+            </CardContent>
           </Card>
         </Container>
       </Section>
@@ -75,7 +68,7 @@ function Programs() {
       <Section>
         <Container>
           <Card>
-            <div style={{ width: "50%", padding: "80px" }}>
+            <CardContent>
               <HeroHeading style={{ color: "#fff" }}>
                 Ceritanya Developer
               </HeroHeading>
@@ -84,17 +77,10 @@ function Programs() {
                 memberdayakan orang-orang dengan keterampilan teknologi dan
                 untuk transformasi digital di Indonesia.
               </Paragraph>
-            </div>
-            <div style={{ width: "50%" }}>
-              <img
-                src="https://get-thrive.app/assets/images/ideas-1.jpg"
-                style={{
-                  borderRadius: "0 24px 24px 0",
-                  width: "100%",
-                  height: "100%"
-                }}
-              ></img>
-            </div>
+            </CardContent>
+            <CardContent style={{ padding: "0" }}>
+              <ImageCardContent src="https://get-thrive.app/assets/images/ideas-1.jpg"></ImageCardContent>
+            </CardContent>
           </Card>
         </Container>
       </Section>
@@ -102,7 +88,7 @@ function Programs() {
       <Section>
         <Container>
           <Card>
-            <div style={{ width: "50%", padding: "80px" }}>
+            <CardContent>
               <HeroHeading style={{ color: "#fff" }}>
                 Pujangga Teknologi
               </HeroHeading>
@@ -111,17 +97,10 @@ function Programs() {
                 memberdayakan orang-orang dengan keterampilan teknologi dan
                 untuk transformasi digital di Indonesia.
               </Paragraph>
-            </div>
-            <div style={{ width: "50%" }}>
-              <img
-                src="https://get-thrive.app/assets/images/decisions-1.jpg"
-                style={{
-                  borderRadius: "0 24px 24px 0",
-                  width: "100%",
-                  height: "100%"
-                }}
-              ></img>
-            </div>
+            </CardContent>
+            <CardContent style={{ padding: "0" }}>
+              <ImageCardContent src="https://get-thrive.app/assets/images/decisions-1.jpg"></ImageCardContent>
+            </CardContent>
           </Card>
         </Container>
       </Section>
@@ -144,6 +123,7 @@ function Programs() {
       <Section>
         <Container>
           <div style={{ flex: "1 1 0%", paddingRight: "30px" }}>
+            <H4>Product Management</H4>
             <Paragraph>
               Kami adalah Startup teknologi non-profit pertama, yang
               memberdayakan orang-orang dengan keterampilan teknologi dan untuk
@@ -152,6 +132,7 @@ function Programs() {
           </div>
           <SpanSeparator></SpanSeparator>
           <div style={{ flex: "1 1 0%", paddingRight: "30px" }}>
+            <H4>Outlook</H4>
             <Paragraph>
               Kami adalah Startup teknologi non-profit pertama, yang
               memberdayakan orang-orang dengan keterampilan teknologi dan untuk
@@ -160,6 +141,7 @@ function Programs() {
           </div>
           <SpanSeparator></SpanSeparator>
           <div style={{ flex: "1 1 0%", paddingRight: "30px" }}>
+            <H4>Focus Group Discussion</H4>
             <Paragraph>
               Kami adalah Startup teknologi non-profit pertama, yang
               memberdayakan orang-orang dengan keterampilan teknologi dan untuk
@@ -168,9 +150,30 @@ function Programs() {
           </div>
         </Container>
       </Section>
+
+      <Section>
+        <Container>
+          <SubheadingContainer>
+            <SubHeading>Komunitas</SubHeading>
+          </SubheadingContainer>
+          <SubheadingContainerRight>
+            <Paragraph>
+              Kami adalah Startup teknologi non-profit pertama, yang
+              memberdayakan orang-orang dengan keterampilan teknologi dan untuk
+              transformasi digital di Indonesia.
+            </Paragraph>
+          </SubheadingContainerRight>
+        </Container>
+      </Section>
     </Layout>
   );
 }
+
+const H4 = styled.h4`
+  font-size: 1.2em;
+  font-weight: 600;
+  margin-bottom: 20px;
+`;
 
 const SpanSeparator = styled.div`
   width: 1px;
@@ -200,7 +203,6 @@ const HeroHeading = styled.h1`
 
   ${mediaqueries.phablet`
     font-size: 28px;
-    margin-top: 10vh;
   `}
 `;
 
@@ -240,15 +242,39 @@ const Container = styled.div`
   display: flex;
   margin-top: 100px;
   margin-bottom: 100px;
+
+  ${mediaqueries.tablet`
+    flex-wrap: wrap;
+  `}
+
+  ${mediaqueries.phone`
+    flex-wrap: wrap;
+  `}
 `;
 
 const SubheadingContainer = styled.div`
   flex: 1 1 50%;
+
+  ${mediaqueries.tablet`
+    flex: 1 1 100%;
+  `}
+
+  ${mediaqueries.phone`
+    flex: 1 1 100%;
+  `}
 `;
 
 const SubheadingContainerRight = styled.div`
   flex: 1 1 50%;
   width: 90%;
+
+  ${mediaqueries.tablet`
+    flex: 1 1 100%;
+  `}
+
+  ${mediaqueries.phone`
+    flex: 1 1 100%;
+  `}
 `;
 
 const Paragraph = styled.div`
@@ -271,6 +297,47 @@ const Card = styled.div`
   align-items: center;
   background-repeat: repeat;
   background-image: url(https://upload.wikimedia.org/wikipedia/commons/6/68/Solid_black.png);
+
+  ${mediaqueries.tablet`
+    flex-wrap: wrap;
+  `}
+
+  ${mediaqueries.phone`
+    flex-wrap: wrap;
+  `}
+`;
+
+const CardContent = styled.div`
+  padding: 80px;
+  width: 50%;
+
+  ${mediaqueries.tablet`
+    padding: 32px 34px;
+    width: 100%;
+  `}
+
+  ${mediaqueries.phone`
+    padding: 32px 34px;
+    width: 100%;
+  `}
+`;
+
+const ImageCardContent = styled.img`
+  width: 100%;
+  border-radius: 0 24px 24px 0;
+  height: 100%;
+
+  ${mediaqueries.tablet`
+    border-radius: 0 0 16px 16px;
+    width: 100%;
+    height: 100%;
+  `}
+
+  ${mediaqueries.phone`
+    border-radius: 0 0 16px 16px;
+    width: 100%;
+    height: 100%;
+  `}
 `;
 
 export default Programs;
