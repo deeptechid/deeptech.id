@@ -23,12 +23,84 @@ function Programs() {
       <Parallax>
         <Section>
           <Container>
-            <SubHeading style={{ color: "#fff" }}>
-              Our Accomplishment
-            </SubHeading>
+            <div style={{ display: "flex", color: "#fff" }}>
+              <ServiceItem>
+                <H4>
+                  Deeptech hadir, untuk Indonesia yang setara <br /> di bidang
+                  teknologi
+                </H4>
+              </ServiceItem>
+              <ServiceItem2>
+                <Paragraph style={{ color: "#fff" }}>
+                  Indonesia Kekurangan digital talent sekitar{" "}
+                  <b>enam ratus ribu per tahun</b>, atau dalam sepuluh tahun
+                  kedepan, akan berjumlah sekitar <b>enam sampai tujuh juta</b>
+                </Paragraph>
+                <H4>
+                  <i>-Bekraf</i>
+                </H4>
+              </ServiceItem2>
+            </div>
           </Container>
         </Section>
       </Parallax>
+
+      <Section>
+        <Container>
+          <SubheadingContainer>
+            <SubHeading>Tentang Kami</SubHeading>
+            <Paragraph>
+              Kami adalah Startup teknologi non-profit pertama, yang
+              memberdayakan orang-orang dengan keterampilan teknologi untuk
+              transformasi digital di Indonesia.
+            </Paragraph>
+          </SubheadingContainer>
+          <SubheadingContainerRight>
+            <div style={{ display: "flex" }}>
+              <div style={{ paddingRight: "1.25rem" }}>
+                <div style={{ fontSize: "3rem", marginBottom: "0" }}>
+                  <span className="text-2xl ml-2">
+                    <H4>12</H4>
+                  </span>
+                </div>
+                <p className="mt-3 text-base text-blue-grey-darkest md:max-w-4/5">
+                  Negara persebaran anggota
+                </p>
+              </div>
+              <div style={{ paddingRight: "1.25rem" }}>
+                <div style={{ fontSize: "3rem", marginBottom: "0" }}>
+                  <span className="text-2xl ml-2">
+                    <H4>50+</H4>
+                  </span>
+                </div>
+                <p className="mt-3 text-base text-blue-grey-darkest md:max-w-4/5">
+                  Perusahaan dari seluruh dunia
+                </p>
+              </div>
+              <div style={{ paddingRight: "1.25rem" }}>
+                <div style={{ fontSize: "3rem", marginBottom: "0" }}>
+                  <span className="text-2xl ml-2">
+                    <H4>90%</H4>
+                  </span>
+                </div>
+                <p className="mt-3 text-base text-blue-grey-darkest md:max-w-4/5">
+                  Senior dalam bidang teknologi
+                </p>
+              </div>
+              <div style={{ paddingRight: "1.25rem" }}>
+                <div style={{ fontSize: "3rem", marginBottom: "0" }}>
+                  <span className="text-2xl ml-2">
+                    <H4>50+</H4>
+                  </span>
+                </div>
+                <p className="mt-3 text-base text-blue-grey-darkest md:max-w-4/5">
+                  Publikasi artikel teknologi
+                </p>
+              </div>
+            </div>
+          </SubheadingContainerRight>
+        </Container>
+      </Section>
 
       <Section>
         <Container>
@@ -57,6 +129,9 @@ function Programs() {
                 memberdayakan orang-orang dengan keterampilan teknologi dan
                 untuk transformasi digital di Indonesia.
               </Paragraph>
+              <LinkAnchor style={{ color: "#fff" }} href="test">
+                Dengerin Podcast Kita
+              </LinkAnchor>
             </CardContent>
             <CardContent style={{ padding: "0" }}>
               <ImageCardContent src="https://get-thrive.app/assets/images/goals-1.jpg"></ImageCardContent>
@@ -77,6 +152,9 @@ function Programs() {
                 memberdayakan orang-orang dengan keterampilan teknologi dan
                 untuk transformasi digital di Indonesia.
               </Paragraph>
+              <LinkAnchor style={{ color: "#fff" }} href="test">
+                Dengerin Podcast Kita
+              </LinkAnchor>
             </CardContent>
             <CardContent style={{ padding: "0" }}>
               <ImageCardContent src="https://get-thrive.app/assets/images/ideas-1.jpg"></ImageCardContent>
@@ -97,6 +175,9 @@ function Programs() {
                 memberdayakan orang-orang dengan keterampilan teknologi dan
                 untuk transformasi digital di Indonesia.
               </Paragraph>
+              <LinkAnchor style={{ color: "#fff" }} href="test">
+                Dengerin Podcast Kita
+              </LinkAnchor>
             </CardContent>
             <CardContent style={{ padding: "0" }}>
               <ImageCardContent src="https://get-thrive.app/assets/images/decisions-1.jpg"></ImageCardContent>
@@ -254,7 +335,8 @@ const TestDiv = styled.div`
 const H4 = styled.h4`
   font-size: 1.2em;
   font-weight: 600;
-  margin-bottom: 20px;
+  margin-bottom: 2vh;
+  margin-top: 2vh;
 `;
 
 const SpanSeparator = styled.div`
@@ -266,22 +348,22 @@ const SpanSeparator = styled.div`
   margin-right: 36px;
 
   ${mediaqueries.tablet`
-        width: 100%;
+    width: 100%;
     height: 1px;
     margin-top: 31px;
     margin-bottom: 31px;
     margin-left: 0px;
-  margin-right: 0px;
-    `}
+    margin-right: 0px;
+  `}
 
   ${mediaqueries.phone`
-        width: 100%;
+    width: 100%;
     height: 1px;
     margin-top: 31px;
     margin-bottom: 31px;
     margin-left: 0px;
-  margin-right: 0px;
-    `}
+    margin-right: 0px;
+  `}
 `;
 
 const HeroHeading = styled.h1`
@@ -309,7 +391,7 @@ const HeroHeading = styled.h1`
 const Parallax = styled.div`
   background-image: url(https://www.newszii.com/wp-content/uploads/2018/11/Video-Editing-Software-Tools.jpg);
   background-size: cover;
-  height: 400px;
+  height: auto;
   width: 100%;
   background-color: transparent;
   background-attachment: fixed;
@@ -382,7 +464,7 @@ const Paragraph = styled.div`
   font-size: 1em;
   font-weight: 200;
   margin-top: 2vh;
-  margin-bottom: 0;
+  margin-bottom: 2vh;
 `;
 
 const Card = styled.div`
@@ -455,6 +537,25 @@ const ServiceItem = styled.div`
     border-radius: 0 0 16px 16px;
     padding: 0;
   `}
+`;
+
+const ServiceItem2 = styled.div`
+  flex: 1 1 10%;
+
+  ${mediaqueries.tablet`
+    border-radius: 0 0 16px 16px;
+    padding: 0;
+  `}
+
+  ${mediaqueries.phone`
+    border-radius: 0 0 16px 16px;
+    padding: 0;
+  `}
+`;
+
+const LinkAnchor = styled.a`
+  font-weight: 800;
+  text-decoration: underline;
 `;
 
 export default Programs;
