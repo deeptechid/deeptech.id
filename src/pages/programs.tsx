@@ -121,34 +121,34 @@ function Programs() {
       </Section>
 
       <Section>
-        <Container>
-          <div style={{ flex: "1 1 0%", paddingRight: "30px" }}>
+        <TestDiv>
+          <ServiceItem>
             <H4>Product Management</H4>
             <Paragraph>
               Kami adalah Startup teknologi non-profit pertama, yang
               memberdayakan orang-orang dengan keterampilan teknologi dan untuk
               transformasi digital di Indonesia.
             </Paragraph>
-          </div>
+          </ServiceItem>
           <SpanSeparator></SpanSeparator>
-          <div style={{ flex: "1 1 0%", paddingRight: "30px" }}>
+          <ServiceItem>
             <H4>Outlook</H4>
             <Paragraph>
               Kami adalah Startup teknologi non-profit pertama, yang
               memberdayakan orang-orang dengan keterampilan teknologi dan untuk
               transformasi digital di Indonesia.
             </Paragraph>
-          </div>
+          </ServiceItem>
           <SpanSeparator></SpanSeparator>
-          <div style={{ flex: "1 1 0%", paddingRight: "30px" }}>
+          <ServiceItem>
             <H4>Focus Group Discussion</H4>
             <Paragraph>
               Kami adalah Startup teknologi non-profit pertama, yang
               memberdayakan orang-orang dengan keterampilan teknologi dan untuk
               transformasi digital di Indonesia.
             </Paragraph>
-          </div>
-        </Container>
+          </ServiceItem>
+        </TestDiv>
       </Section>
 
       <Section>
@@ -165,9 +165,91 @@ function Programs() {
           </SubheadingContainerRight>
         </Container>
       </Section>
+
+      <Section>
+        <Container>
+          <Card style={{ backgroundColor: "#fafafa" }}>
+            <CardContent style={{ padding: "0" }}>
+              <img
+                src="http://cdn7.dissolve.com/p/D18_182_112/D18_182_112_0004_600.jpg"
+                width="382"
+                sizes="(max-width: 479px) 100vw, (max-width: 767px) 308.96875px, (max-width: 991px) 86vw, 41vw"
+                alt=""
+                style={{ width: "100%", borderRadius: "4px" }}
+              ></img>
+              <img
+                src="https://i.pinimg.com/originals/4d/99/10/4d99109c5e1cc5f287be91e11d963b3e.jpg"
+                width="200"
+                sizes="(max-width: 991px) 100vw, 327.5px"
+                alt=""
+                style={{
+                  position: "absolute",
+                  left: "auto",
+                  top: "80px",
+                  right: "-40px",
+                  bottom: "auto"
+                }}
+              ></img>
+            </CardContent>
+            <CardContent>
+              <H4>Sarasehan Renjana Teknologi</H4>
+              <Paragraph>
+                Kami adalah Startup teknologi non-profit pertama, yang
+                memberdayakan orang-orang
+              </Paragraph>
+              <H4 style={{ marginTop: "40px" }}>Deep Talk</H4>
+              <Paragraph>
+                Kami adalah Startup teknologi non-profit pertama, yang
+                memberdayakan orang-orang
+              </Paragraph>
+              <H4 style={{ marginTop: "40px" }}>Relawan Teknologi</H4>
+              <Paragraph>
+                Kami adalah Startup teknologi non-profit pertama, yang
+                memberdayakan orang-orang
+              </Paragraph>
+            </CardContent>
+          </Card>
+        </Container>
+      </Section>
     </Layout>
   );
 }
+
+const TestDiv = styled.div`
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 60px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 50px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+
+  ${mediaqueries.tablet`
+        padding: 40px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+        max-width: 100%;
+    `}
+
+  ${mediaqueries.phone`
+        padding: 40px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+        max-width: 100%;
+    `}
+`;
 
 const H4 = styled.h4`
   font-size: 1.2em;
@@ -179,9 +261,27 @@ const SpanSeparator = styled.div`
   width: 1px;
   flex-grow: 0;
   flex-shrink: 0;
-  background: black;
+  background: rgba(0, 0, 0, 0.1);
   margin-left: 36px;
   margin-right: 36px;
+
+  ${mediaqueries.tablet`
+        width: 100%;
+    height: 1px;
+    margin-top: 31px;
+    margin-bottom: 31px;
+    margin-left: 0px;
+  margin-right: 0px;
+    `}
+
+  ${mediaqueries.phone`
+        width: 100%;
+    height: 1px;
+    margin-top: 31px;
+    margin-bottom: 31px;
+    margin-left: 0px;
+  margin-right: 0px;
+    `}
 `;
 
 const HeroHeading = styled.h1`
@@ -295,8 +395,7 @@ const Card = styled.div`
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-repeat: repeat;
-  background-image: url(https://upload.wikimedia.org/wikipedia/commons/6/68/Solid_black.png);
+  background-color: #000;
 
   ${mediaqueries.tablet`
     flex-wrap: wrap;
@@ -310,13 +409,16 @@ const Card = styled.div`
 const CardContent = styled.div`
   padding: 80px;
   width: 50%;
+  position: relative;
 
   ${mediaqueries.tablet`
+    position: relative;
     padding: 32px 34px;
     width: 100%;
   `}
 
   ${mediaqueries.phone`
+    position: relative;
     padding: 32px 34px;
     width: 100%;
   `}
@@ -337,6 +439,21 @@ const ImageCardContent = styled.img`
     border-radius: 0 0 16px 16px;
     width: 100%;
     height: 100%;
+  `}
+`;
+
+const ServiceItem = styled.div`
+  flex: 1 1 0%;
+  padding-right: 30px;
+
+  ${mediaqueries.tablet`
+    border-radius: 0 0 16px 16px;
+    padding: 0;
+  `}
+
+  ${mediaqueries.phone`
+    border-radius: 0 0 16px 16px;
+    padding: 0;
   `}
 `;
 
