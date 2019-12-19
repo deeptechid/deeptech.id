@@ -14,8 +14,8 @@ function Programs() {
       <Section>
         <Container>
           <HeroHeading>
-            Kami sedang membangun
-            <br /> kultur teknologi <br /> di Indonesia
+            Kami hadir
+            <br /> untuk Indonesia <br /> setara di bidang teknologi
           </HeroHeading>
         </Container>
       </Section>
@@ -23,83 +23,62 @@ function Programs() {
       <Parallax>
         <Section>
           <Container>
-            <div style={{ display: "flex", color: "#fff" }}>
-              <ServiceItem>
-                <H4>
-                  Deeptech hadir, untuk Indonesia yang setara <br /> di bidang
-                  teknologi
-                </H4>
-              </ServiceItem>
-              <ServiceItem2>
-                <Paragraph style={{ color: "#fff" }}>
+            <div style={{ color: "#fff" }}>
+              <H4>
+                <i>
                   Indonesia Kekurangan digital talent sekitar{" "}
                   <b>enam ratus ribu per tahun</b>, atau dalam sepuluh tahun
                   kedepan, akan berjumlah sekitar <b>enam sampai tujuh juta</b>
-                </Paragraph>
-                <H4>
-                  <i>-Bekraf</i>
-                </H4>
-              </ServiceItem2>
+                  <br />
+                </i>
+              </H4>
+              <H4>Badan Ekonomi Kreatif, 2019</H4>
             </div>
           </Container>
         </Section>
       </Parallax>
 
       <Section>
-        <Container>
+        <Container style={{ marginBottom: "10px" }}>
           <SubheadingContainer>
             <SubHeading>Tentang Kami</SubHeading>
+          </SubheadingContainer>
+          <SubheadingContainerRight>
             <Paragraph>
               Kami adalah Startup teknologi non-profit pertama, yang
               memberdayakan orang-orang dengan keterampilan teknologi untuk
               transformasi digital di Indonesia.
             </Paragraph>
-          </SubheadingContainer>
-          <SubheadingContainerRight>
-            <div style={{ display: "flex" }}>
-              <div style={{ paddingRight: "1.25rem" }}>
-                <div style={{ fontSize: "3rem", marginBottom: "0" }}>
-                  <span className="text-2xl ml-2">
-                    <H4>12</H4>
-                  </span>
-                </div>
-                <p className="mt-3 text-base text-blue-grey-darkest md:max-w-4/5">
-                  Negara persebaran anggota
-                </p>
-              </div>
-              <div style={{ paddingRight: "1.25rem" }}>
-                <div style={{ fontSize: "3rem", marginBottom: "0" }}>
-                  <span className="text-2xl ml-2">
-                    <H4>50+</H4>
-                  </span>
-                </div>
-                <p className="mt-3 text-base text-blue-grey-darkest md:max-w-4/5">
-                  Perusahaan dari seluruh dunia
-                </p>
-              </div>
-              <div style={{ paddingRight: "1.25rem" }}>
-                <div style={{ fontSize: "3rem", marginBottom: "0" }}>
-                  <span className="text-2xl ml-2">
-                    <H4>90%</H4>
-                  </span>
-                </div>
-                <p className="mt-3 text-base text-blue-grey-darkest md:max-w-4/5">
-                  Senior dalam bidang teknologi
-                </p>
-              </div>
-              <div style={{ paddingRight: "1.25rem" }}>
-                <div style={{ fontSize: "3rem", marginBottom: "0" }}>
-                  <span className="text-2xl ml-2">
-                    <H4>50+</H4>
-                  </span>
-                </div>
-                <p className="mt-3 text-base text-blue-grey-darkest md:max-w-4/5">
-                  Publikasi artikel teknologi
-                </p>
-              </div>
-            </div>
           </SubheadingContainerRight>
         </Container>
+      </Section>
+
+      <Section>
+        <TestDiv>
+          <ServiceItem>
+            <HeroHeading>50+</HeroHeading>
+            <H4>Perusahaan Persebaran</H4>
+            <Paragraph>
+              Member kami tersebar di 50 perusahaan di 12 negara
+            </Paragraph>
+          </ServiceItem>
+          <SpanSeparator></SpanSeparator>
+          <ServiceItem>
+            <HeroHeading>90%</HeroHeading>
+            <H4>Senior Teknologi</H4>
+            <Paragraph>
+              Mayoritas member kami adalah senior di bidang teknologi
+            </Paragraph>
+          </ServiceItem>
+          <SpanSeparator></SpanSeparator>
+          <ServiceItem>
+            <HeroHeading>50+</HeroHeading>
+            <H4>Publikasi Artikel</H4>
+            <Paragraph>
+              Kami sudah mempublikasikan lebih dari 50 artikel teknologi
+            </Paragraph>
+          </ServiceItem>
+        </TestDiv>
       </Section>
 
       <Section>
@@ -109,9 +88,9 @@ function Programs() {
           </SubheadingContainer>
           <SubheadingContainerRight>
             <Paragraph>
-              Kami adalah Startup teknologi non-profit pertama, yang
-              memberdayakan orang-orang dengan keterampilan teknologi dan untuk
-              transformasi digital di Indonesia.
+              Kami memiliki beberapa kanal edukasi yang membahas hal - hal
+              menarik seputar teknologi yang dibawakan oleh para ahli di bidang
+              teknologi
             </Paragraph>
           </SubheadingContainerRight>
         </Container>
@@ -125,9 +104,9 @@ function Programs() {
                 Podcast KodeNol
               </HeroHeading>
               <Paragraph style={{ color: "#fff" }}>
-                Kami adalah Startup teknologi non-profit pertama, yang
-                memberdayakan orang-orang dengan keterampilan teknologi dan
-                untuk transformasi digital di Indonesia.
+                KodeNol merupakan nama dari serial podcast kita yang
+                menceritakan bagaimana jalan dan cara menjadi software engineer
+                dari nol
               </Paragraph>
               <LinkAnchor style={{ color: "#fff" }} href="test">
                 Dengerin Podcast Kita
@@ -148,9 +127,9 @@ function Programs() {
                 Ceritanya Developer
               </HeroHeading>
               <Paragraph style={{ color: "#fff" }}>
-                Kami adalah Startup teknologi non-profit pertama, yang
-                memberdayakan orang-orang dengan keterampilan teknologi dan
-                untuk transformasi digital di Indonesia.
+                'Ceritanya Developer' merupakan nama dari serial podcast kita
+                yang bercerita tentang pengalaman dari sosok yang sukses di
+                bidang software engineering
               </Paragraph>
               <LinkAnchor style={{ color: "#fff" }} href="test">
                 Dengerin Podcast Kita
@@ -171,9 +150,8 @@ function Programs() {
                 Pujangga Teknologi
               </HeroHeading>
               <Paragraph style={{ color: "#fff" }}>
-                Kami adalah Startup teknologi non-profit pertama, yang
-                memberdayakan orang-orang dengan keterampilan teknologi dan
-                untuk transformasi digital di Indonesia.
+                'Pujangga Teknologi' merupakan serial blog kita yang berisi
+                tulisan - tulisan dari para ahli di bidang teknologi
               </Paragraph>
               <LinkAnchor style={{ color: "#fff" }} href="test">
                 Dengerin Podcast Kita
@@ -235,7 +213,7 @@ function Programs() {
       <Section>
         <Container>
           <SubheadingContainer>
-            <SubHeading>Komunitas</SubHeading>
+            <SubHeading>Komunitas Teknologi</SubHeading>
           </SubheadingContainer>
           <SubheadingContainerRight>
             <Paragraph>
@@ -248,48 +226,96 @@ function Programs() {
       </Section>
 
       <Section>
-        <Container>
-          <Card style={{ backgroundColor: "#fafafa" }}>
-            <CardContent style={{ padding: "0" }}>
-              <img
-                src="http://cdn7.dissolve.com/p/D18_182_112/D18_182_112_0004_600.jpg"
-                width="382"
-                sizes="(max-width: 479px) 100vw, (max-width: 767px) 308.96875px, (max-width: 991px) 86vw, 41vw"
-                alt=""
-                style={{ width: "100%", borderRadius: "4px" }}
-              ></img>
-              <img
-                src="https://i.pinimg.com/originals/4d/99/10/4d99109c5e1cc5f287be91e11d963b3e.jpg"
-                width="200"
-                sizes="(max-width: 991px) 100vw, 327.5px"
-                alt=""
-                style={{
-                  position: "absolute",
-                  left: "auto",
-                  top: "80px",
-                  right: "-40px",
-                  bottom: "auto"
-                }}
-              ></img>
-            </CardContent>
-            <CardContent>
-              <H4>Sarasehan Renjana Teknologi</H4>
-              <Paragraph>
-                Kami adalah Startup teknologi non-profit pertama, yang
-                memberdayakan orang-orang
-              </Paragraph>
-              <H4 style={{ marginTop: "40px" }}>Deep Talk</H4>
-              <Paragraph>
-                Kami adalah Startup teknologi non-profit pertama, yang
-                memberdayakan orang-orang
-              </Paragraph>
-              <H4 style={{ marginTop: "40px" }}>Relawan Teknologi</H4>
-              <Paragraph>
-                Kami adalah Startup teknologi non-profit pertama, yang
-                memberdayakan orang-orang
-              </Paragraph>
-            </CardContent>
-          </Card>
+        <TestDiv>
+          <ServiceItem>
+            <img
+              src="https://media.istockphoto.com/photos/group-of-diversity-people-volunteer-charity-project-picture-id873780612?k=6&m=873780612&s=612x612&w=0&h=gNwnopwCU5RvIsgJHCxAwVmiePbQTfEqFgtPaWnA64k="
+              alt=""
+              style={{
+                width: "100%",
+                borderRadius: "10px",
+                marginBottom: "20px"
+              }}
+            />
+            <H4>Sarasehan</H4>
+            <Paragraph>
+              Kami adalah Startup teknologi non-profit pertama, yang
+              memberdayakan orang-orang dengan keterampilan teknologi dan untuk
+              transformasi digital di Indonesia.
+            </Paragraph>
+          </ServiceItem>
+          <SpanSeparator></SpanSeparator>
+          <ServiceItem>
+            <img
+              src="https://media.istockphoto.com/photos/group-of-diversity-people-volunteer-charity-project-picture-id873780612?k=6&m=873780612&s=612x612&w=0&h=gNwnopwCU5RvIsgJHCxAwVmiePbQTfEqFgtPaWnA64k="
+              alt=""
+              style={{
+                width: "100%",
+                borderRadius: "10px",
+                marginBottom: "20px"
+              }}
+            />
+            <H4>Deeptalk</H4>
+            <Paragraph>
+              Kami adalah Startup teknologi non-profit pertama, yang
+              memberdayakan orang-orang dengan keterampilan teknologi dan untuk
+              transformasi digital di Indonesia.
+            </Paragraph>
+          </ServiceItem>
+          <SpanSeparator></SpanSeparator>
+          <ServiceItem>
+            <img
+              src="https://media.istockphoto.com/photos/group-of-diversity-people-volunteer-charity-project-picture-id873780612?k=6&m=873780612&s=612x612&w=0&h=gNwnopwCU5RvIsgJHCxAwVmiePbQTfEqFgtPaWnA64k="
+              alt=""
+              style={{
+                width: "100%",
+                borderRadius: "10px",
+                marginBottom: "20px"
+              }}
+            />
+            <H4>Relawan Teknologi</H4>
+            <Paragraph>
+              Kami adalah Startup teknologi non-profit pertama, yang
+              memberdayakan orang-orang dengan keterampilan teknologi dan untuk
+              transformasi digital di Indonesia.
+            </Paragraph>
+          </ServiceItem>
+        </TestDiv>
+      </Section>
+
+      <Section>
+        <Container style={{ justifyContent: "center", marginBottom: "10px" }}>
+          <SubHeading>Kolaborator Kami</SubHeading>
+        </Container>
+        <Container style={{ justifyContent: "center", marginTop: "10px" }}>
+          <LogoContainer>
+            <img
+              src="https://shipright.co/images/logobar/logo-digitalocean@2x.png"
+              alt=""
+              style={{ width: "100%" }}
+            />
+          </LogoContainer>
+          <LogoContainer>
+            <img
+              src="https://shipright.co/images/logobar/logo-growbots@2x.png"
+              alt=""
+              style={{ width: "100%" }}
+            />
+          </LogoContainer>
+          <LogoContainer>
+            <img
+              src="https://shipright.co/images/logobar/logo-funnel@2x.png"
+              alt=""
+              style={{ width: "100%" }}
+            />
+          </LogoContainer>
+          <LogoContainer>
+            <img
+              src="https://shipright.co/images/logobar/logo-whereby@2x.png"
+              alt=""
+              style={{ width: "100%" }}
+            />
+          </LogoContainer>
         </Container>
       </Section>
     </Layout>
@@ -333,7 +359,7 @@ const TestDiv = styled.div`
 `;
 
 const H4 = styled.h4`
-  font-size: 1.2em;
+  font-size: 1.3em;
   font-weight: 600;
   margin-bottom: 2vh;
   margin-top: 2vh;
@@ -526,7 +552,7 @@ const ImageCardContent = styled.img`
 
 const ServiceItem = styled.div`
   flex: 1 1 0%;
-  padding-right: 30px;
+  padding: 10px;
 
   ${mediaqueries.tablet`
     border-radius: 0 0 16px 16px;
@@ -551,6 +577,12 @@ const ServiceItem2 = styled.div`
     border-radius: 0 0 16px 16px;
     padding: 0;
   `}
+`;
+
+const LogoContainer = styled.div`
+  width: 200px;
+  max-width: none;
+  padding: 25px;
 `;
 
 const LinkAnchor = styled.a`
