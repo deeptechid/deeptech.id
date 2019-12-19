@@ -6,9 +6,9 @@ const log = (message, section) =>
 const path = require("path");
 const createPaginatedPages = require("gatsby-paginate");
 
-const templatesDirectory = path.resolve(__dirname, "../../src/templates");
+const templatesDirectory = path.resolve(__dirname, "../../templates");
 const templates = {
-  articles: path.resolve(templatesDirectory, "articles.template.tsx"),
+  articles: path.resolve(templatesDirectory, "blogs.template.tsx"),
   article: path.resolve(templatesDirectory, "article.template.tsx"),
   author: path.resolve(templatesDirectory, "author.template.tsx")
 };
@@ -46,7 +46,8 @@ const byDate = (a, b) => new Date(b.dateForSEO) - new Date(a.dateForSEO);
 
 module.exports = async ({ actions: { createPage }, graphql }, themeOptions) => {
   const {
-    basePath = "/",
+    rootPath,
+    basePath = "/blogs",
     authorsPath = "/authors",
     authorsPage = true,
     pageLength = 6,
@@ -55,7 +56,7 @@ module.exports = async ({ actions: { createPage }, graphql }, themeOptions) => {
   } = themeOptions;
 
   // Defaulting to look at the local MDX files as sources.
-  const { local = true, contentful = false } = sources;
+  const { local = true, contentful = true } = sources;
 
   let authors;
   let articles;
@@ -66,12 +67,18 @@ module.exports = async ({ actions: { createPage }, graphql }, themeOptions) => {
     netlify: { authors: [], articles: [] }
   };
 
+  if (rootPath) {
+    log("Config rootPath", rootPath);
+  } else {
+    log("Config rootPath not set, using basePath instead =>", basePath);
+  }
+
   log("Config basePath", basePath);
   if (authorsPage) log("Config authorsPath", authorsPath);
 
   if (local) {
     try {
-      log("Querying Authors & Aritcles source:", "Local");
+      log("Querying Authors & Articles source:", "Local");
       const localAuthors = await graphql(query.local.authors);
       const localArticles = await graphql(query.local.articles);
 
@@ -89,7 +96,7 @@ module.exports = async ({ actions: { createPage }, graphql }, themeOptions) => {
 
   if (contentful) {
     try {
-      log("Querying Authors & Aritcles source:", "Contentful");
+      log("Querying Authors & Articles source:", "Contentful");
       const contentfulAuthors = await graphql(query.contentful.authors);
       const contentfulArticles = await graphql(query.contentful.articles);
 
