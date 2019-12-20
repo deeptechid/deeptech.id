@@ -12,74 +12,50 @@ function Programs() {
       <SEO />
 
       <Section>
-        <Container>
-          <HeroHeading>
+        <Container style={{ display: "block" }}>
+          <HeroHeading style={{ marginBottom: "5vh" }}>
             Kami hadir
             <br /> untuk Indonesia <br /> setara di bidang teknologi
           </HeroHeading>
+          <Paragraph style={{ width: "50%" }}>
+            Kami adalah Startup teknologi non-profit pertama, yang memberdayakan
+            orang-orang dengan keterampilan teknologi untuk transformasi digital
+            di Indonesia.
+          </Paragraph>
         </Container>
       </Section>
 
       <Parallax>
         <Section>
           <Container>
-            <div style={{ color: "#fff" }}>
-              <H4>
-                <i>
-                  Indonesia Kekurangan digital talent sekitar{" "}
-                  <b>enam ratus ribu per tahun</b>, atau dalam sepuluh tahun
-                  kedepan, akan berjumlah sekitar <b>enam sampai tujuh juta</b>
-                  <br />
-                </i>
-              </H4>
-              <H4>Badan Ekonomi Kreatif, 2019</H4>
-            </div>
+            <DarkCardContainer>
+              <ServiceItem>
+                <HeroHeading>50+</HeroHeading>
+                <H4>Perusahaan Persebaran</H4>
+                <ParagraphWhite>
+                  Member kami tersebar di 50 perusahaan di 12 negara
+                </ParagraphWhite>
+              </ServiceItem>
+              <SpanSeparator></SpanSeparator>
+              <ServiceItem>
+                <HeroHeading>90%</HeroHeading>
+                <H4>Senior Teknologi</H4>
+                <ParagraphWhite>
+                  Mayoritas member kami adalah senior di bidang teknologi
+                </ParagraphWhite>
+              </ServiceItem>
+              <SpanSeparator></SpanSeparator>
+              <ServiceItem>
+                <HeroHeading>50+</HeroHeading>
+                <H4>Publikasi Artikel</H4>
+                <ParagraphWhite>
+                  Kami sudah mempublikasikan lebih dari 50 artikel teknologi
+                </ParagraphWhite>
+              </ServiceItem>
+            </DarkCardContainer>
           </Container>
         </Section>
       </Parallax>
-
-      <Section>
-        <Container style={{ marginBottom: "10px" }}>
-          <SubheadingContainer>
-            <SubHeading>Tentang Kami</SubHeading>
-          </SubheadingContainer>
-          <SubheadingContainerRight>
-            <Paragraph>
-              Kami adalah Startup teknologi non-profit pertama, yang
-              memberdayakan orang-orang dengan keterampilan teknologi untuk
-              transformasi digital di Indonesia.
-            </Paragraph>
-          </SubheadingContainerRight>
-        </Container>
-      </Section>
-
-      <Section>
-        <TestDiv>
-          <ServiceItem>
-            <HeroHeading>50+</HeroHeading>
-            <H4>Perusahaan Persebaran</H4>
-            <Paragraph>
-              Member kami tersebar di 50 perusahaan di 12 negara
-            </Paragraph>
-          </ServiceItem>
-          <SpanSeparator></SpanSeparator>
-          <ServiceItem>
-            <HeroHeading>90%</HeroHeading>
-            <H4>Senior Teknologi</H4>
-            <Paragraph>
-              Mayoritas member kami adalah senior di bidang teknologi
-            </Paragraph>
-          </ServiceItem>
-          <SpanSeparator></SpanSeparator>
-          <ServiceItem>
-            <HeroHeading>50+</HeroHeading>
-            <H4>Publikasi Artikel</H4>
-            <Paragraph>
-              Kami sudah mempublikasikan lebih dari 50 artikel teknologi
-            </Paragraph>
-          </ServiceItem>
-        </TestDiv>
-      </Section>
 
       <Section>
         <Container>
@@ -322,6 +298,40 @@ function Programs() {
   );
 }
 
+const DarkCardContainer = styled.div`
+  color: #fff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 50px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+  background-color: rgba(21, 29, 29, 0.8);
+
+  ${mediaqueries.tablet`
+    padding: 40px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    max-width: 100%;
+  `}
+
+  ${mediaqueries.phone`
+    padding: 40px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    max-width: 100%;
+  `}
+`;
+
 const TestDiv = styled.div`
   display: -webkit-box;
   display: -webkit-flex;
@@ -350,12 +360,12 @@ const TestDiv = styled.div`
     `}
 
   ${mediaqueries.phone`
-        padding: 40px;
+    padding: 40px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     flex-direction: column;
-        max-width: 100%;
-    `}
+    max-width: 100%;
+  `}
 `;
 
 const H4 = styled.h4`
@@ -394,22 +404,22 @@ const SpanSeparator = styled.div`
 
 const HeroHeading = styled.h1`
   z-index: 10;
-  margin-top: 20px;
   font-style: normal;
   font-weight: 600;
   font-size: 52px;
   line-height: 1.15;
-  color: ${p => p.theme.colors.primary};
 
   a {
     color: ${p => p.theme.colors.accent};
   }
 
-  ${mediaqueries.desktop`
-    font-size: 38px
+  ${mediaqueries.tablet`
+    margin-top: 20px;
+    font-size: 38px;
   `}
 
-  ${mediaqueries.phablet`
+  ${mediaqueries.phone`
+    margin-top: 20px;
     font-size: 28px;
   `}
 `;
@@ -487,6 +497,22 @@ const SubheadingContainerRight = styled.div`
 
 const Paragraph = styled.div`
   color: #111216;
+  font-size: 1em;
+  font-weight: 200;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+
+  ${mediaqueries.tablet`
+    width: 100%!important;
+  `}
+
+  ${mediaqueries.phone`
+    width: 100%!important;
+  `}
+`;
+
+const ParagraphWhite = styled.div`
+  color: #fff;
   font-size: 1em;
   font-weight: 200;
   margin-top: 2vh;
