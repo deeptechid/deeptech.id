@@ -19,69 +19,59 @@ function Blog() {
   );
 }
 
-let cachedScripts = [];
-
-function useScript(src) {
+function useScript(src: string) {
   const [state, setState] = useState({
     loaded: false,
     error: false
   });
 
   useEffect(() => {
-    if (cachedScripts.includes(src)) {
+    let script = document.createElement("script");
+    script.src = src;
+    script.async = true;
+
+    const onScriptLoad = () => {
       setState({
         loaded: true,
         error: false
       });
-    } else {
-      cachedScripts.push(src);
+      loadWidget();
+    };
 
-      let script = document.createElement("script");
-      script.src = src;
-      script.async = true;
+    const onScriptError = () => {
+      script.remove();
+      setState({
+        loaded: true,
+        error: true
+      });
+    };
 
-      const onScriptLoad = () => {
-        setState({
-          loaded: true,
-          error: false
-        });
-        window.MediumWidget.Init({
-          renderTo: "#medium-widget",
-          params: {
-            resource: "https://medium.com/pujanggateknologi",
-            postsPerLine: 2,
-            limit: 4,
-            picture: "big",
-            fields: ["description", "author", "claps", "publishAt"],
-            ratio: "landscape"
-          }
-        });
-      };
+    script.addEventListener("load", onScriptLoad);
+    script.addEventListener("error", onScriptError);
 
-      const onScriptError = () => {
-        const index = cachedScripts.indexOf(src);
-        if (index >= 0) cachedScripts.splice(index, 1);
-        script.remove();
+    document.body.appendChild(script);
 
-        setState({
-          loaded: true,
-          error: true
-        });
-      };
-
-      script.addEventListener("load", onScriptLoad);
-      script.addEventListener("error", onScriptError);
-
-      document.body.appendChild(script);
-
-      return () => {
-        script.removeEventListener("load", onScriptLoad);
-        script.removeEventListener("error", onScriptError);
-      };
-    }
+    return () => {
+      script.removeEventListener("load", onScriptLoad);
+      script.removeEventListener("error", onScriptError);
+    };
   }, [src]);
 
   return [state.loaded, state.error];
+}
+
+function loadWidget() {
+  window.MediumWidget.Init({
+    renderTo: "#medium-widget",
+    params: {
+      resource: "https://medium.com/pujanggateknologi",
+      postsPerLine: 2,
+      limit: 4,
+      picture: "big",
+      fields: ["description", "author", "claps", "publishAt"],
+      ratio: "landscape"
+    }
+  });
 }
 
 const BlogHeader = styled.div`

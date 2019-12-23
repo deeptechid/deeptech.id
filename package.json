@@ -7,7 +7,7 @@
     "build": "gatsby build",
     "dev": "gatsby develop",
     "clean": "gatsby clean",
-    "format": "prettier \"src/**/*.{ts,tsx,html}\" --write",
+    "format": "prettier \"src/**/*.{ts,tsx,js,html}\" --write",
     "lint": "eslint \"src/**/*.{ts,tsx}\" --quiet"
   },
   "dependencies": {
