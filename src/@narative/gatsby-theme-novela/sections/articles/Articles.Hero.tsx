@@ -78,16 +78,12 @@ const SubheadingContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 100px;
-
-  ${mediaqueries.desktop`
-    margin-bottom: 80px;
-  `};
+  margin-bottom: 10%;
+  margin-top: 10%;
 
   ${mediaqueries.tablet`
     margin-left: 10%;
     margin-right: 10%;
-    margin-bottom: 60px;
     font-size: 0.6em;
     text-align: center;
   `};
@@ -95,7 +91,6 @@ const SubheadingContainer = styled.div`
   ${mediaqueries.phablet`
     margin-left: 10%;
     margin-right: 10%;
-    margin-bottom: 60px;
     font-size: 0.6em;
     text-align: center;
   `};
