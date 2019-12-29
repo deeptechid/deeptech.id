@@ -65,8 +65,8 @@ function NavigationHeader() {
             </button>
           ) : (
             <>
-              <SharePageButton />
-              {/* <DarkModeToggle /> */}
+              <NavbarLink href="/blogs">Blog</NavbarLink>
+              <NavbarLink href="/activities">Events</NavbarLink>
             </>
           )}
         </NavControls>
@@ -242,7 +242,7 @@ const IconWrapper = styled.button<{ isDark: boolean }>`
   align-items: center;
   justify-content: center;
   transition: opacity 0.3s ease;
-  margin-left: 30px;
+  margin-right: 30px;
 
   &:hover {
     opacity: 1;
@@ -347,4 +347,10 @@ const Hidden = styled.span`
   height: 0px;
   visibility: hidden;
   overflow: hidden;
+`;
+
+const NavbarLink = styled.a`
+  margin-right: 30px;
+  color: #000;
+  font-weight: 700;
 `;
