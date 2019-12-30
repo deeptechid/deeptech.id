@@ -84,7 +84,10 @@ function Programs() {
                 menceritakan bagaimana jalan dan cara menjadi software engineer
                 dari nol
               </Paragraph>
-              <LinkAnchor style={{ color: "#fff" }} href="test">
+              <LinkAnchor
+                style={{ color: "#fff" }}
+                href="https://open.spotify.com/show/0919qUs3HI9pgoKENxC5VY"
+              >
                 Dengerin Podcast Kita
               </LinkAnchor>
             </CardContent>
@@ -107,7 +110,10 @@ function Programs() {
                 yang bercerita tentang pengalaman dari sosok yang sukses di
                 bidang software engineering
               </Paragraph>
-              <LinkAnchor style={{ color: "#fff" }} href="test">
+              <LinkAnchor
+                style={{ color: "#fff" }}
+                href="https://open.spotify.com/show/6grT1c7jDkhK4skm1YIsTs"
+              >
                 Dengerin Podcast Kita
               </LinkAnchor>
             </CardContent>
@@ -129,8 +135,11 @@ function Programs() {
                 'Pujangga Teknologi' merupakan serial blog kita yang berisi
                 tulisan - tulisan dari para ahli di bidang teknologi
               </Paragraph>
-              <LinkAnchor style={{ color: "#fff" }} href="test">
-                Dengerin Podcast Kita
+              <LinkAnchor
+                style={{ color: "#fff" }}
+                href="https://medium.com/pujanggateknologi"
+              >
+                Baca Blog Kita
               </LinkAnchor>
             </CardContent>
             <CardContent style={{ padding: "0" }}>
@@ -263,34 +272,36 @@ function Programs() {
         <Container style={{ justifyContent: "center", marginBottom: "10px" }}>
           <SubHeading>Kolaborator Kami</SubHeading>
         </Container>
-        <Container style={{ justifyContent: "center", marginTop: "10px" }}>
+        <Container
+          style={{
+            justifyContent: "center",
+            marginTop: "10px",
+            flexWrap: "wrap"
+          }}
+        >
           <LogoContainer>
-            <img
-              src="https://shipright.co/images/logobar/logo-digitalocean@2x.png"
-              alt=""
-              style={{ width: "100%" }}
-            />
+            <BoxedLogo src={"logo/bri.png"}></BoxedLogo>
           </LogoContainer>
           <LogoContainer>
-            <img
-              src="https://shipright.co/images/logobar/logo-growbots@2x.png"
-              alt=""
-              style={{ width: "100%" }}
-            />
+            <BoxedLogo src={"logo/hacktiv8.png"}></BoxedLogo>
           </LogoContainer>
           <LogoContainer>
-            <img
-              src="https://shipright.co/images/logobar/logo-funnel@2x.png"
-              alt=""
-              style={{ width: "100%" }}
-            />
+            <BoxedLogo src={"logo/warpin.png"}></BoxedLogo>
           </LogoContainer>
           <LogoContainer>
-            <img
-              src="https://shipright.co/images/logobar/logo-whereby@2x.png"
-              alt=""
-              style={{ width: "100%" }}
-            />
+            <BoxedLogo src={"logo/narasi.png"}></BoxedLogo>
+          </LogoContainer>
+          <LogoContainer>
+            <BoxedLogo src={"logo/lkpp.png"}></BoxedLogo>
+          </LogoContainer>
+          <LogoContainer>
+            <BoxedLogo src={"logo/feedloop.png"}></BoxedLogo>
+          </LogoContainer>
+          <LogoContainer>
+            <BoxedLogo src={"logo/paragon.jpeg"}></BoxedLogo>
+          </LogoContainer>
+          <LogoContainer>
+            <BoxedLogo src={"logo/maxima.png"}></BoxedLogo>
           </LogoContainer>
         </Container>
       </Section>
@@ -591,29 +602,19 @@ const ServiceItem = styled.div`
   `}
 `;
 
-const ServiceItem2 = styled.div`
-  flex: 1 1 10%;
-
-  ${mediaqueries.tablet`
-    border-radius: 0 0 16px 16px;
-    padding: 0;
-  `}
-
-  ${mediaqueries.phone`
-    border-radius: 0 0 16px 16px;
-    padding: 0;
-  `}
-`;
-
 const LogoContainer = styled.div`
-  width: 200px;
-  max-width: none;
   padding: 25px;
 `;
 
 const LinkAnchor = styled.a`
   font-weight: 800;
   text-decoration: underline;
+`;
+
+const BoxedLogo = styled.img`
+  height: 60px;
+  width: auto;
+  text-align: center;
 `;
 
 export default Programs;

@@ -8,7 +8,7 @@ const createPaginatedPages = require("gatsby-paginate");
 
 const templatesDirectory = path.resolve(__dirname, "../../templates");
 const templates = {
-  articles: path.resolve(templatesDirectory, "blogs.template.tsx"),
+  articles: path.resolve(templatesDirectory, "activities.template.tsx"),
   article: path.resolve(templatesDirectory, "article.template.tsx"),
   author: path.resolve(templatesDirectory, "author.template.tsx")
 };
@@ -47,7 +47,7 @@ const byDate = (a, b) => new Date(b.dateForSEO) - new Date(a.dateForSEO);
 module.exports = async ({ actions: { createPage }, graphql }, themeOptions) => {
   const {
     rootPath,
-    basePath = "/blogs",
+    basePath = "/events",
     authorsPath = "/authors",
     authorsPage = true,
     pageLength = 6,
