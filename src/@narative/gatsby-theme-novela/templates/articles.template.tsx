@@ -84,7 +84,10 @@ function Programs() {
                 menceritakan bagaimana jalan dan cara menjadi software engineer
                 dari nol
               </Paragraph>
-              <LinkAnchor style={{ color: "#fff" }} href="test">
+              <LinkAnchor
+                style={{ color: "#fff" }}
+                href="https://open.spotify.com/show/0919qUs3HI9pgoKENxC5VY"
+              >
                 Dengerin Podcast Kita
               </LinkAnchor>
             </CardContent>
@@ -107,7 +110,10 @@ function Programs() {
                 yang bercerita tentang pengalaman dari sosok yang sukses di
                 bidang software engineering
               </Paragraph>
-              <LinkAnchor style={{ color: "#fff" }} href="test">
+              <LinkAnchor
+                style={{ color: "#fff" }}
+                href="https://open.spotify.com/show/6grT1c7jDkhK4skm1YIsTs"
+              >
                 Dengerin Podcast Kita
               </LinkAnchor>
             </CardContent>
@@ -129,8 +135,11 @@ function Programs() {
                 'Pujangga Teknologi' merupakan serial blog kita yang berisi
                 tulisan - tulisan dari para ahli di bidang teknologi
               </Paragraph>
-              <LinkAnchor style={{ color: "#fff" }} href="test">
-                Dengerin Podcast Kita
+              <LinkAnchor
+                style={{ color: "#fff" }}
+                href="https://medium.com/pujanggateknologi"
+              >
+                Baca Blog Kita
               </LinkAnchor>
             </CardContent>
             <CardContent style={{ padding: "0" }}>
