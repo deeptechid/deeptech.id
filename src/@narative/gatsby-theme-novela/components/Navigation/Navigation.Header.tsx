@@ -66,7 +66,7 @@ function NavigationHeader() {
           ) : (
             <>
               <NavbarLink href="/blogs">Blog</NavbarLink>
-              <NavbarLink href="/activities">Events</NavbarLink>
+              <NavbarLink href="/events">Events</NavbarLink>
             </>
           )}
         </NavControls>
