@@ -1936,9 +1936,9 @@
     glob-to-regexp "^0.3.0"
 
 "@narative/gatsby-theme-novela@^0.*":
-  version "0.10.5"
-  resolved "https://registry.yarnpkg.com/@narative/gatsby-theme-novela/-/gatsby-theme-novela-0.10.5.tgz#2706a09ba0d53a213332a5b4e0d11a8ea8ab6f5a"
-  integrity sha512-jM48RqaNMSs/41ZvVJJOWkYq95EFHD63HBeweZJFCblU61mpF6tCTjX9O1GcK9DUj/G6/gRTuv0iD3oTlw3nFg==
+  version "0.12.2"
+  resolved "https://registry.yarnpkg.com/@narative/gatsby-theme-novela/-/gatsby-theme-novela-0.12.2.tgz#fb48777aded7347d9c73a46b663aaf92d91c4ae3"
+  integrity sha512-aRgA+KfF8Lc+9dfZ99NJ7VS4aC7i4GLy8tnwCSS2JCnVzHO+wlyoJplqnOv8+JoPiv6Eb3CrwL8WSgHQwGLx7Q==
   dependencies:
     "@emotion/core" "^10.0.14"
     "@emotion/styled" "^10.0.14"
@@ -1979,6 +1979,7 @@
     react-outside-click-handler "^1.2.4"
     remark-slug "^5.1.2"
     request "^2.88.0"
+    slugify "^1.3.6"
     theme-ui "^0.2.40"
     typeface-merriweather "^0.0.72"
 
