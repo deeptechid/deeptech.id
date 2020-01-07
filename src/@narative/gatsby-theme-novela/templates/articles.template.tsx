@@ -15,12 +15,10 @@ function Programs() {
         <Container style={{ display: "block" }}>
           <HeroHeading style={{ marginBottom: "5vh" }}>
             Kami hadir
-            <br /> untuk Indonesia <br /> setara di bidang teknologi
+            <br /> untuk Indonesia <br /> setara di bidang teknologi!
           </HeroHeading>
           <Paragraph style={{ width: "50%" }}>
-            Kami adalah Startup teknologi non-profit pertama, yang memberdayakan
-            orang-orang dengan keterampilan teknologi untuk transformasi digital
-            di Indonesia.
+            Kami adalah startup teknologi non-profit pertama yang memberdayakan orang-orang dengan keterampilan teknologi untuk transformasi digital di Indonesia.
           </Paragraph>
         </Container>
       </Section>
@@ -33,7 +31,7 @@ function Programs() {
                 <HeroHeading>50+</HeroHeading>
                 <H4>Perusahaan Persebaran</H4>
                 <ParagraphWhite>
-                  Member kami tersebar di 50 perusahaan di 12 negara
+                  Anggota kami tersebar di 50 perusahaan di 12 negara berbeda.
                 </ParagraphWhite>
               </ServiceItem>
               <SpanSeparator></SpanSeparator>
@@ -41,7 +39,7 @@ function Programs() {
                 <HeroHeading>90%</HeroHeading>
                 <H4>Senior Teknologi</H4>
                 <ParagraphWhite>
-                  Mayoritas member kami adalah senior di bidang teknologi
+                  Mayoritas anggota kami adalah ahli senior di bidang teknologi.
                 </ParagraphWhite>
               </ServiceItem>
               <SpanSeparator></SpanSeparator>
@@ -49,7 +47,7 @@ function Programs() {
                 <HeroHeading>50+</HeroHeading>
                 <H4>Publikasi Artikel</H4>
                 <ParagraphWhite>
-                  Kami sudah mempublikasikan lebih dari 50 artikel teknologi
+                  Kami sudah mempublikasikan lebih dari 50 artikel teknologi di Medium Pujangga Teknologi.
                 </ParagraphWhite>
               </ServiceItem>
             </DarkCardContainer>
@@ -64,9 +62,7 @@ function Programs() {
           </SubheadingContainer>
           <SubheadingContainerRight>
             <Paragraph>
-              Kami memiliki beberapa kanal edukasi yang membahas hal - hal
-              menarik seputar teknologi yang dibawakan oleh para ahli di bidang
-              teknologi
+              Kami memiliki beberapa kanal edukasi yang membahas hal-hal menarik seputar teknologi informasi.
             </Paragraph>
           </SubheadingContainerRight>
         </Container>
@@ -80,19 +76,17 @@ function Programs() {
                 Podcast KodeNol
               </HeroHeading>
               <Paragraph style={{ color: "#fff" }}>
-                KodeNol merupakan nama dari serial podcast kita yang
-                menceritakan bagaimana jalan dan cara menjadi software engineer
-                dari nol
+                Serial podcast yang membahas informasi seputar teknologi dan <i>startup</i> dengan mendatangkan narasumber ahli sebagai pembicaranya.
               </Paragraph>
               <LinkAnchor
                 style={{ color: "#fff" }}
                 href="https://open.spotify.com/show/0919qUs3HI9pgoKENxC5VY"
               >
-                Dengerin Podcast Kita
+                Dengar podcast kami
               </LinkAnchor>
             </CardContent>
             <CardContent style={{ padding: "0" }}>
-              <ImageCardContent src="https://get-thrive.app/assets/images/goals-1.jpg"></ImageCardContent>
+              <ImageCardContent src={"images/kodenol.png"}></ImageCardContent>
             </CardContent>
           </Card>
         </Container>
@@ -103,22 +97,20 @@ function Programs() {
           <Card>
             <CardContent>
               <HeroHeading style={{ color: "#fff" }}>
-                Ceritanya Developer
+                Podcast Ceritanya Developer
               </HeroHeading>
               <Paragraph style={{ color: "#fff" }}>
-                'Ceritanya Developer' merupakan nama dari serial podcast kita
-                yang bercerita tentang pengalaman dari sosok yang sukses di
-                bidang software engineering
+                Serial podcast kolaborasi dengan anggota Deep Tech Foundation, Riza Fahmi. Mengulik cerita kehidupan para <i>developer</i> di Indonesia, mulai dari cerita pertama kali menyentuh komputer, persoalan saat membangun karier di dunia IT, serta pembahasan tips dan trik mencapai kesuksesan.
               </Paragraph>
               <LinkAnchor
                 style={{ color: "#fff" }}
                 href="https://open.spotify.com/show/6grT1c7jDkhK4skm1YIsTs"
               >
-                Dengerin Podcast Kita
+                Dengar podcast kami
               </LinkAnchor>
             </CardContent>
             <CardContent style={{ padding: "0" }}>
-              <ImageCardContent src="https://get-thrive.app/assets/images/ideas-1.jpg"></ImageCardContent>
+              <ImageCardContent src={"images/ceritanya-developer.png"}></ImageCardContent>
             </CardContent>
           </Card>
         </Container>
@@ -132,67 +124,20 @@ function Programs() {
                 Pujangga Teknologi
               </HeroHeading>
               <Paragraph style={{ color: "#fff" }}>
-                'Pujangga Teknologi' merupakan serial blog kita yang berisi
-                tulisan - tulisan dari para ahli di bidang teknologi
+                Berisi kumpulan artikel teknologi informasi yang ditulis para ahli yang tergabung sebagai anggota Deep Tech Foundation. Kumpulan artikel ini dapat ditemukan di situs Medium.
               </Paragraph>
               <LinkAnchor
                 style={{ color: "#fff" }}
                 href="https://medium.com/pujanggateknologi"
               >
-                Baca Blog Kita
+                Baca blog kami
               </LinkAnchor>
             </CardContent>
             <CardContent style={{ padding: "0" }}>
-              <ImageCardContent src="https://get-thrive.app/assets/images/decisions-1.jpg"></ImageCardContent>
+              <ImageCardContent src={"images/pujangga-teknologi.png"}></ImageCardContent>
             </CardContent>
           </Card>
         </Container>
-      </Section>
-
-      <Section>
-        <Container>
-          <SubheadingContainer>
-            <SubHeading>Konsultan Teknologi</SubHeading>
-          </SubheadingContainer>
-          <SubheadingContainerRight>
-            <Paragraph>
-              Kami adalah Startup teknologi non-profit pertama, yang
-              memberdayakan orang-orang dengan keterampilan teknologi dan untuk
-              transformasi digital di Indonesia.
-            </Paragraph>
-          </SubheadingContainerRight>
-        </Container>
-      </Section>
-
-      <Section>
-        <TestDiv>
-          <ServiceItem>
-            <H4>Product Management</H4>
-            <Paragraph>
-              Kami adalah Startup teknologi non-profit pertama, yang
-              memberdayakan orang-orang dengan keterampilan teknologi dan untuk
-              transformasi digital di Indonesia.
-            </Paragraph>
-          </ServiceItem>
-          <SpanSeparator></SpanSeparator>
-          <ServiceItem>
-            <H4>Outlook</H4>
-            <Paragraph>
-              Kami adalah Startup teknologi non-profit pertama, yang
-              memberdayakan orang-orang dengan keterampilan teknologi dan untuk
-              transformasi digital di Indonesia.
-            </Paragraph>
-          </ServiceItem>
-          <SpanSeparator></SpanSeparator>
-          <ServiceItem>
-            <H4>Focus Group Discussion</H4>
-            <Paragraph>
-              Kami adalah Startup teknologi non-profit pertama, yang
-              memberdayakan orang-orang dengan keterampilan teknologi dan untuk
-              transformasi digital di Indonesia.
-            </Paragraph>
-          </ServiceItem>
-        </TestDiv>
       </Section>
 
       <Section>
@@ -202,9 +147,7 @@ function Programs() {
           </SubheadingContainer>
           <SubheadingContainerRight>
             <Paragraph>
-              Kami adalah Startup teknologi non-profit pertama, yang
-              memberdayakan orang-orang dengan keterampilan teknologi dan untuk
-              transformasi digital di Indonesia.
+              Kami hadir untuk bekerja sama dengan komunitas teknologi di seluruh wilayah Indonesia. Bersama-sama bergerak dalam penyetaraan teknologi.
             </Paragraph>
           </SubheadingContainerRight>
         </Container>
@@ -214,8 +157,8 @@ function Programs() {
         <TestDiv>
           <ServiceItem>
             <img
-              src="https://media.istockphoto.com/photos/group-of-diversity-people-volunteer-charity-project-picture-id873780612?k=6&m=873780612&s=612x612&w=0&h=gNwnopwCU5RvIsgJHCxAwVmiePbQTfEqFgtPaWnA64k="
-              alt=""
+              src={"images/sarasehan.png"}
+              alt="Sarasehan"
               style={{
                 width: "100%",
                 borderRadius: "10px",
@@ -224,34 +167,30 @@ function Programs() {
             />
             <H4>Sarasehan</H4>
             <Paragraph>
-              Kami adalah Startup teknologi non-profit pertama, yang
-              memberdayakan orang-orang dengan keterampilan teknologi dan untuk
-              transformasi digital di Indonesia.
+              Forum diskusi tematik dengan mengundang pihak-pihak tertentu yang memiliki  keahlian di luar bidang teknologi untuk berbagi informasi mengenai isu terkini. Forum diskusi ini diperuntukkan bagi anggota Deep Tech Foundation.
             </Paragraph>
           </ServiceItem>
           <SpanSeparator></SpanSeparator>
           <ServiceItem>
             <img
-              src="https://media.istockphoto.com/photos/group-of-diversity-people-volunteer-charity-project-picture-id873780612?k=6&m=873780612&s=612x612&w=0&h=gNwnopwCU5RvIsgJHCxAwVmiePbQTfEqFgtPaWnA64k="
-              alt=""
+              src={"images/deeptalk.png"}
+              alt="Deeptalk"
               style={{
                 width: "100%",
                 borderRadius: "10px",
                 marginBottom: "20px"
               }}
             />
-            <H4>Deeptalk</H4>
+            <H4>Deep Talk</H4>
             <Paragraph>
-              Kami adalah Startup teknologi non-profit pertama, yang
-              memberdayakan orang-orang dengan keterampilan teknologi dan untuk
-              transformasi digital di Indonesia.
+              Forum diskusi tematik bulanan yang membahas informasi tertentu seputar IT dan <i>startup</i> dengan mendatangkan anggota Deep Tech Foundation sebagai narasumbernya. Ditujukan untuk berbagi ilmu kepada para penikmat teknologi di seluruh Indonesia.
             </Paragraph>
           </ServiceItem>
           <SpanSeparator></SpanSeparator>
           <ServiceItem>
             <img
-              src="https://media.istockphoto.com/photos/group-of-diversity-people-volunteer-charity-project-picture-id873780612?k=6&m=873780612&s=612x612&w=0&h=gNwnopwCU5RvIsgJHCxAwVmiePbQTfEqFgtPaWnA64k="
-              alt=""
+              src={"images/relawan-teknologi.png"}
+              alt="Relawan Teknologi"
               style={{
                 width: "100%",
                 borderRadius: "10px",
@@ -260,9 +199,7 @@ function Programs() {
             />
             <H4>Relawan Teknologi</H4>
             <Paragraph>
-              Kami adalah Startup teknologi non-profit pertama, yang
-              memberdayakan orang-orang dengan keterampilan teknologi dan untuk
-              transformasi digital di Indonesia.
+              Deep Tech Foundation hadir mengujungi teman-teman komunitas di seluruh wilayah Indonesia untuk menjalankan misi penyetaraan teknologi.
             </Paragraph>
           </ServiceItem>
         </TestDiv>
@@ -270,7 +207,7 @@ function Programs() {
 
       <Section>
         <Container style={{ justifyContent: "center", marginBottom: "10px" }}>
-          <SubHeading>Kolaborator Kami</SubHeading>
+          <SubHeading>Kami bekerja sama dengan</SubHeading>
         </Container>
         <Container
           style={{

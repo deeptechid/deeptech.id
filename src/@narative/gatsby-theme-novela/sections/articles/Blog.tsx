@@ -10,8 +10,7 @@ function Blog() {
     <BlogContainer>
       <SubheadingContainer>
         <BlogHeader>
-          Ikuti berbagai perkembangan teknologi dari para pujangga teknologi
-          kami
+          Ikuti perkembangan teknologi dari kami melalui Pujangga Teknologi.
         </BlogHeader>
       </SubheadingContainer>
       <div id="medium-widget"></div>
@@ -66,7 +65,7 @@ function loadWidget() {
     params: {
       resource: "https://medium.com/pujanggateknologi",
       postsPerLine: 2,
-      limit: 4,
+      limit: 10,
       picture: "big",
       fields: ["description", "author", "claps", "publishAt"],
       ratio: "landscape"

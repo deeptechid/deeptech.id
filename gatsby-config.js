@@ -7,11 +7,10 @@ module.exports = {
     siteUrl: `https://deeptech.id`,
     description: `Knowledge sharing, meaningful networking, self-improvement & transformation.`,
     hero: {
-      heading: `Berbagai update teknologi dan kegiatan kami`,
+      heading: `Temukan kegiatan terbaru kami di sini.`,
       maxWidth: 788
     },
-    social: [
-      {
+    social: [{
         name: `github`,
         url: `https://github.com/deeptechid`
       },
@@ -25,8 +24,7 @@ module.exports = {
       }
     ]
   },
-  plugins: [
-    {
+  plugins: [{
       resolve: "@narative/gatsby-theme-novela",
       options: {
         contentPosts: "content/posts",
