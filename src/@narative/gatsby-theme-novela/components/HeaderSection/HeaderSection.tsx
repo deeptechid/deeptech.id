@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-import mediaqueries from "@styles/media";
+import mediaqueries from "@narative/gatsby-theme-novela/src/styles/media";
 
 const HeaderSection = styled.section<{ narrow?: boolean }>`
   width: 100%;

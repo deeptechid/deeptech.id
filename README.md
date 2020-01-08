@@ -1,61 +1,69 @@
-<a href="https://novela.narative.co" target="_blank">
-<img src="https://raw.githubusercontent.com/narative/gatsby-theme-novela-example/master/assets/gatsby-theme-novela-hero.jpg" alt="gatsby-novela-theme hero image" />
-</a>
+# Deeptech.id Web
 
-<br/>
+## Dev Dependencies
 
-# Gatsby Starter Novela
+For contributing to this system, please refer to this guide.
 
-With minimal styling and maximum features — including multiple homepage layouts, built-in social sharing and dark mode — Novela makes it easy to start publishing beautiful articles and stories with Gatsby.
+### System Dependencies
 
-Novela is built by the team at [Narative](https://www.narative.co), and built for everyone that loves the web.
+- NodeJS v.8.* or newer
+- ReactJS v.16.*
 
-<div>
-<a href="https://novela.narative.co" target="_blank">
-<img src="https://raw.githubusercontent.com/narative/gatsby-theme-novela-example/master/assets/gatsby-theme-novela-cta-demo.jpg" alt="gatsby-novela-theme live demo" width="295px" />
-</a>
-</div>
+#### Node installation on OS X
 
-<div>
-<a href="https://www.narative.co/design/open/novela" target="_blank">
-<img src="https://raw.githubusercontent.com/narative/gatsby-theme-novela-example/master/assets/gatsby-theme-novela-cta-figma.jpg" alt="gatsby-novela-theme figma link" width="295px" />
-</a>
-</div>
+You will need to use a Terminal. On OS X, you can find the default terminal in
+`/Applications/Utilities/Terminal.app`.
 
-# Using Gatsby Starter Novela
+Please install [Homebrew](http://brew.sh/) if it's not already done with the following command.
 
-This guide will take you through setting up Novela with Gatsby Starter Novela.
+    $ ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 
-### Step 1: Starter installation
+If everything is fine, you should run
 
-##### With `gatsby-cli`:
+    $ brew install node
 
-```sh
-gatsby new novela-site https://github.com/narative/gatsby-starter-novela
-```
+#### Node installation on Linux
 
-##### With `git clone`:
+    $ sudo apt-get install python-software-properties
+    $ sudo add-apt-repository ppa:chris-lea/node.js
+    $ sudo apt-get update
+    $ sudo apt-get install nodejs
 
-```sh
-git clone git@github.com:narative/gatsby-starter-novela.git novela-site
+## Install
 
-cd novela-site
+    $ https://github.com/deeptechid/deeptech.id/
+    $ cd deeptech.id
+    $ npm install
 
-yarn
-```
+### Configure app
 
-### Step 2: Develop & Build
+- Copy configuration file `.env.example` to `.env`
+- Ask our maintainer to give development credentials
 
-Once installed or cloned locally and all packages are installed you can begin developing your site.
+## Start & watch
 
-```sh
-# Run localhost
-yarn dev
+    $ yarn dev
 
-# Build your Gatsby site
-yarn build
-```
+## Languages & tools
 
-### Help
+- Typescript (.ts)
+- React Typescript (.tsx)
+- [Eslint](https://eslint.org/) used to prevent JavaScript error
+- [Prettier](https://npmjs.org/package/jscs) used to check coding conventions
+- [React](http://facebook.github.io/react) used for UI
+- [Gatsby](https://www.gatsbyjs.org) used for static content website themes
+- [Contentful](https://www.contentful.com) used for fetch data via GraphQL
 
-For more information visit the [Theme repository](https://github.com/narative/gatsby-theme-novela)
+## Style Guide
+
+- Important to use tab with two space setting
+- Always run `yarn format` and `yarn lint`
+- Any pull request must follow `MERGE_REQUEST.md` guideline template
+
+## Branch Conventions
+
+There are 4 kinds of branch
+- features/{your-feature-name}
+- enhancement/{your-enhancement-name}
+- hot-fix/{your-hot-fix-name}
+- bug-fix/{your-bug-fix-name}

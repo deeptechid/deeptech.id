@@ -1,1 +1,1 @@
-export { default } from '@components/HeaderSection/HeaderSection'
+export { default } from "./HeaderSection";

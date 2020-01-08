@@ -3,16 +3,16 @@ import styled from "@emotion/styled";
 import { Link, navigate } from "gatsby";
 import { useColorMode } from "theme-ui";
 
-import Section from "@components/Section";
-import Logo from "@components/Logo";
+import Section from "@narative/gatsby-theme-novela/src/components/Section/Section";
+import Logo from "../Logo/Logo";
 
-import Icons from "@icons";
-import mediaqueries from "@styles/media";
+import Icons from "@narative/gatsby-theme-novela/src/icons";
+import mediaqueries from "@narative/gatsby-theme-novela/src/styles/media";
 import {
   copyToClipboard,
   getWindowDimensions,
-  getBreakpointFromTheme,
-} from "@utils";
+  getBreakpointFromTheme
+} from "@narative/gatsby-theme-novela/src/utils";
 
 function NavigationHeader() {
   const [showBackArrow, setShowBackArrow] = useState<boolean>(false);
@@ -31,7 +31,7 @@ function NavigationHeader() {
     const isNotPaginated = !location.pathname.includes("/page/");
 
     setShowBackArrow(
-      previousPathWasHomepage && isNotPaginated && width <= phablet,
+      previousPathWasHomepage && isNotPaginated && width <= phablet
     );
     setPreviousPath(prev);
   }, []);
@@ -65,8 +65,8 @@ function NavigationHeader() {
             </button>
           ) : (
             <>
-              <SharePageButton />
-              {/* <DarkModeToggle /> */}
+              <NavbarLink href="/blogs">Blog</NavbarLink>
+              <NavbarLink href="/events">Events</NavbarLink>
             </>
           )}
         </NavControls>
@@ -242,7 +242,7 @@ const IconWrapper = styled.button<{ isDark: boolean }>`
   align-items: center;
   justify-content: center;
   transition: opacity 0.3s ease;
-  margin-left: 30px;
+  margin-right: 30px;
 
   &:hover {
     opacity: 1;
@@ -347,4 +347,10 @@ const Hidden = styled.span`
   height: 0px;
   visibility: hidden;
   overflow: hidden;
+`;
+
+const NavbarLink = styled.a`
+  margin-right: 30px;
+  color: #000;
+  font-weight: 700;
 `;

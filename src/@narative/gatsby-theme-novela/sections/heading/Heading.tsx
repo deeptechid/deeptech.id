@@ -1,51 +1,47 @@
-import React, { useContext } from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
-import styled from '@emotion/styled';
+import React from "react";
+import styled from "@emotion/styled";
 
-import HeaderSection from '@components/HeaderSection';
-import BodySection from '@components/BodySection';
-import Header_bg from '../../../../assets/Indonesia_Map0.svg';
-import Icons from '@icons';
-import mediaqueries from '@styles/media';
-import { IAuthor } from '@types';
+import BodySection from "../../components/BodySection/BodySection";
+import Header_bg from "../../../../assets/Indonesia_Map0.svg";
+import Icons from "@narative/gatsby-theme-novela/src/icons";
+import mediaqueries from "@narative/gatsby-theme-novela/src/styles/media";
 
 function Heading() {
-
   return (
     <BodySection relative id="Headers__Hero">
       <ImageContainer>
-        <img src={Header_bg} style={{ alignSelf:'center', maxWidth:'100%', height:'100%' }}/>
+        <img
+          src={Header_bg}
+          style={{ alignSelf: "center", maxWidth: "100%", height: "100%" }}
+        />
       </ImageContainer>
       <HeaderContainerGrid>
-        <HeadingContainer 
-        style={{ 
-          maxWidth: `580px`, 
+        <HeadingContainer
+          style={{
+            maxWidth: `580px`
           }}
         >
           <HeroHeading>
-          Untuk Indonesia <span style={{color: "#e40c2b"}}>setara</span> di bidang teknologi!
+            Untuk Indonesia <span style={{ color: "#e40c2b" }}>setara</span> di
+            bidang teknologi!
           </HeroHeading>
           <HeadingDescriptionContainer>
-            <HeroDescription>
-              Ikuti update kita di
-            </HeroDescription>
+            <HeroDescription>Ikuti update kita di</HeroDescription>
             <IconContainer>
               <IconHeader>
-                <a href='https://www.instagram.com/deeptech.id/'>
-                <Icons.Instagram fill='#73737D'/>
+                <a href="https://www.instagram.com/deeptech.id/">
+                  <Icons.Instagram fill="#73737D" />
                 </a>
               </IconHeader>
               <IconHeader>
-                <a href='https://open.spotify.com/show/6grT1c7jDkhK4skm1YIsTs?si=vDkWO1srQViiu4gMiiq4jA'>
-                <Icons.Spotify fill='#73737D'/>
+                <a href="https://open.spotify.com/show/6grT1c7jDkhK4skm1YIsTs?si=vDkWO1srQViiu4gMiiq4jA">
+                  <Icons.Spotify fill="#73737D" />
                 </a>
               </IconHeader>
             </IconContainer>
           </HeadingDescriptionContainer>
         </HeadingContainer>
-        <ImageHeaderContainer>
-          
-        </ImageHeaderContainer>
+        <ImageHeaderContainer></ImageHeaderContainer>
       </HeaderContainerGrid>
     </BodySection>
   );
@@ -202,7 +198,3 @@ const IconHeader = styled.div`
   padding-bottom: 0px;
   align-items: center;
 `;
-
-
-
-
