@@ -6,13 +6,15 @@ For contributing to this system, please refer to this guide.
 
 ### System Dependencies
 
-- NodeJS v.8.* or newer
-- ReactJS v.16.*
+- NodeJS v.8.\* or newer
+- ReactJS v.16.\*
+- Yarn
 
 #### Node installation on OS X
 
 You will need to use a Terminal. On OS X, you can find the default terminal in
 `/Applications/Utilities/Terminal.app`.
+Please avoid using NPM instead use Yarn.
 
 Please install [Homebrew](http://brew.sh/) if it's not already done with the following command.
 
@@ -33,7 +35,7 @@ If everything is fine, you should run
 
     $ https://github.com/deeptechid/deeptech.id/
     $ cd deeptech.id
-    $ npm install
+    $ yarn install
 
 ### Configure app
 
@@ -63,6 +65,7 @@ If everything is fine, you should run
 ## Branch Conventions
 
 There are 4 kinds of branch
+
 - features/{your-feature-name}
 - enhancement/{your-enhancement-name}
 - hot-fix/{your-hot-fix-name}
