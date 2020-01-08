@@ -18,7 +18,7 @@ function Programs() {
             <br /> untuk Indonesia <br /> setara di bidang teknologi!
           </HeroHeading>
           <Paragraph style={{ width: "50%" }}>
-            Kami adalah startup teknologi non-profit pertama yang memberdayakan orang-orang dengan keterampilan teknologi untuk transformasi digital di Indonesia.
+            Kami adalah <i>startup</i> teknologi non-profit pertama yang memberdayakan orang-orang dengan keterampilan teknologi untuk transformasi digital di Indonesia.
           </Paragraph>
         </Container>
       </Section>
@@ -100,7 +100,7 @@ function Programs() {
                 Podcast Ceritanya Developer
               </HeroHeading>
               <Paragraph style={{ color: "#fff" }}>
-                Serial podcast kolaborasi dengan anggota Deep Tech Foundation, Riza Fahmi. Mengulik cerita kehidupan para <i>developer</i> di Indonesia, mulai dari cerita pertama kali menyentuh komputer, persoalan saat membangun karier di dunia IT, serta pembahasan tips dan trik mencapai kesuksesan.
+                Serial podcast kolaborasi dengan anggota Deep Tech Foundation, Riza Fahmi. Isinya mengulik cerita kehidupan para developer di Indonesia. Mulai dari cerita pertama kali menyentuh komputer, persoalan yang dihadapi saat membangun karier di dunia IT, sampai pembahasan tips dan trik untuk mencapai kesuksesan.
               </Paragraph>
               <LinkAnchor
                 style={{ color: "#fff" }}
