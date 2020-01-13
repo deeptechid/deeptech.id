@@ -173,7 +173,7 @@ function Programs() {
           <SpanSeparator></SpanSeparator>
           <ServiceItem>
             <img
-              src={"images/deeptalk.png"}
+              src={"images/deeptalk.jpg"}
               alt="Deeptalk"
               style={{
                 width: "100%",
