@@ -189,7 +189,7 @@ function Programs() {
           <SpanSeparator></SpanSeparator>
           <ServiceItem>
             <img
-              src={"images/relawan-teknologi.png"}
+              src={"images/relawan-teknologi.jpg"}
               alt="Relawan Teknologi"
               style={{
                 width: "100%",
