@@ -157,7 +157,7 @@ function Programs() {
         <TestDiv>
           <ServiceItem>
             <img
-              src={"images/sarasehan.png"}
+              src={"images/sarasehan.jpg"}
               alt="Sarasehan"
               style={{
                 width: "100%",
