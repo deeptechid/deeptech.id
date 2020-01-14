@@ -157,7 +157,7 @@ function Programs() {
         <TestDiv>
           <ServiceItem>
             <img
-              src={"images/sarasehan.png"}
+              src={"images/sarasehan.jpg"}
               alt="Sarasehan"
               style={{
                 width: "100%",
@@ -173,7 +173,7 @@ function Programs() {
           <SpanSeparator></SpanSeparator>
           <ServiceItem>
             <img
-              src={"images/deeptalk.png"}
+              src={"images/deeptalk.jpg"}
               alt="Deeptalk"
               style={{
                 width: "100%",
@@ -189,7 +189,7 @@ function Programs() {
           <SpanSeparator></SpanSeparator>
           <ServiceItem>
             <img
-              src={"images/relawan-teknologi.png"}
+              src={"images/relawan-teknologi.jpg"}
               alt="Relawan Teknologi"
               style={{
                 width: "100%",
