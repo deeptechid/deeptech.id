@@ -18,7 +18,7 @@
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.16.0",
-    "gatsby": "^2.18.5",
+    "gatsby": "^2.18.22",
     "gatsby-plugin-manifest": "^2.2.31",
     "gatsby-source-contentful": "^2.1.65",
     "react": "^16.12.0",
