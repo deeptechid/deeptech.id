@@ -18,7 +18,9 @@ function Programs() {
             <br /> untuk Indonesia <br /> setara di bidang teknologi!
           </HeroHeading>
           <Paragraph style={{ width: "50%" }}>
-            Kami adalah <i>startup</i> teknologi non-profit pertama yang memberdayakan orang-orang dengan keterampilan teknologi untuk transformasi digital di Indonesia.
+            Kami adalah <i>startup</i> teknologi non-profit pertama yang
+            memberdayakan orang-orang dengan keterampilan teknologi untuk
+            transformasi digital di Indonesia.
           </Paragraph>
         </Container>
       </Section>
@@ -47,7 +49,8 @@ function Programs() {
                 <HeroHeading>50+</HeroHeading>
                 <H4>Publikasi Artikel</H4>
                 <ParagraphWhite>
-                  Kami sudah mempublikasikan lebih dari 50 artikel teknologi di Medium Pujangga Teknologi.
+                  Kami sudah mempublikasikan lebih dari 50 artikel teknologi di
+                  Medium Pujangga Teknologi.
                 </ParagraphWhite>
               </ServiceItem>
             </DarkCardContainer>
@@ -62,7 +65,8 @@ function Programs() {
           </SubheadingContainer>
           <SubheadingContainerRight>
             <Paragraph>
-              Kami memiliki beberapa kanal edukasi yang membahas hal-hal menarik seputar teknologi informasi.
+              Kami memiliki beberapa kanal edukasi yang membahas hal-hal menarik
+              seputar teknologi informasi.
             </Paragraph>
           </SubheadingContainerRight>
         </Container>
@@ -76,7 +80,9 @@ function Programs() {
                 Podcast KodeNol
               </HeroHeading>
               <Paragraph style={{ color: "#fff" }}>
-                Serial podcast yang membahas informasi seputar teknologi dan <i>startup</i> dengan mendatangkan narasumber ahli sebagai pembicaranya.
+                Serial podcast yang membahas informasi seputar teknologi dan{" "}
+                <i>startup</i> dengan mendatangkan narasumber ahli sebagai
+                pembicaranya.
               </Paragraph>
               <LinkAnchor
                 style={{ color: "#fff" }}
@@ -100,7 +106,11 @@ function Programs() {
                 Podcast Ceritanya Developer
               </HeroHeading>
               <Paragraph style={{ color: "#fff" }}>
-                Serial podcast kolaborasi dengan anggota Deep Tech Foundation, Riza Fahmi. Isinya mengulik cerita kehidupan para developer di Indonesia. Mulai dari cerita pertama kali menyentuh komputer, persoalan yang dihadapi saat membangun karier di dunia IT, sampai pembahasan tips dan trik untuk mencapai kesuksesan.
+                Serial podcast kolaborasi dengan anggota Deep Tech Foundation,
+                Riza Fahmi. Isinya mengulik cerita kehidupan para developer di
+                Indonesia. Mulai dari cerita pertama kali menyentuh komputer,
+                persoalan yang dihadapi saat membangun karier di dunia IT,
+                sampai pembahasan tips dan trik untuk mencapai kesuksesan.
               </Paragraph>
               <LinkAnchor
                 style={{ color: "#fff" }}
@@ -110,7 +120,9 @@ function Programs() {
               </LinkAnchor>
             </CardContent>
             <CardContent style={{ padding: "0" }}>
-              <ImageCardContent src={"images/ceritanya-developer.png"}></ImageCardContent>
+              <ImageCardContent
+                src={"images/ceritanya-developer.png"}
+              ></ImageCardContent>
             </CardContent>
           </Card>
         </Container>
@@ -124,7 +136,9 @@ function Programs() {
                 Pujangga Teknologi
               </HeroHeading>
               <Paragraph style={{ color: "#fff" }}>
-                Berisi kumpulan artikel teknologi informasi yang ditulis para ahli yang tergabung sebagai anggota Deep Tech Foundation. Kumpulan artikel ini dapat ditemukan di situs Medium.
+                Berisi kumpulan artikel teknologi informasi yang ditulis para
+                ahli yang tergabung sebagai anggota Deep Tech Foundation.
+                Kumpulan artikel ini dapat ditemukan di situs Medium.
               </Paragraph>
               <LinkAnchor
                 style={{ color: "#fff" }}
@@ -134,7 +148,9 @@ function Programs() {
               </LinkAnchor>
             </CardContent>
             <CardContent style={{ padding: "0" }}>
-              <ImageCardContent src={"images/pujangga-teknologi.png"}></ImageCardContent>
+              <ImageCardContent
+                src={"images/pujangga-teknologi.png"}
+              ></ImageCardContent>
             </CardContent>
           </Card>
         </Container>
@@ -147,7 +163,9 @@ function Programs() {
           </SubheadingContainer>
           <SubheadingContainerRight>
             <Paragraph>
-              Kami hadir untuk bekerja sama dengan komunitas teknologi di seluruh wilayah Indonesia. Bersama-sama bergerak dalam penyetaraan teknologi.
+              Kami hadir untuk bekerja sama dengan komunitas teknologi di
+              seluruh wilayah Indonesia. Bersama-sama bergerak dalam penyetaraan
+              teknologi.
             </Paragraph>
           </SubheadingContainerRight>
         </Container>
@@ -167,7 +185,10 @@ function Programs() {
             />
             <H4>Sarasehan</H4>
             <Paragraph>
-              Forum diskusi tematik dengan mengundang pihak-pihak tertentu yang memiliki  keahlian di luar bidang teknologi untuk berbagi informasi mengenai isu terkini. Forum diskusi ini diperuntukkan bagi anggota Deep Tech Foundation.
+              Forum diskusi tematik dengan mengundang pihak-pihak tertentu yang
+              memiliki keahlian di luar bidang teknologi untuk berbagi informasi
+              mengenai isu terkini. Forum diskusi ini diperuntukkan bagi anggota
+              Deep Tech Foundation.
             </Paragraph>
           </ServiceItem>
           <SpanSeparator></SpanSeparator>
@@ -183,7 +204,10 @@ function Programs() {
             />
             <H4>Deep Talk</H4>
             <Paragraph>
-              Forum diskusi tematik bulanan yang membahas informasi tertentu seputar IT dan <i>startup</i> dengan mendatangkan anggota Deep Tech Foundation sebagai narasumbernya. Ditujukan untuk berbagi ilmu kepada para penikmat teknologi di seluruh Indonesia.
+              Forum diskusi tematik bulanan yang membahas informasi tertentu
+              seputar IT dan <i>startup</i> dengan mendatangkan anggota Deep
+              Tech Foundation sebagai narasumbernya. Ditujukan untuk berbagi
+              ilmu kepada para penikmat teknologi di seluruh Indonesia.
             </Paragraph>
           </ServiceItem>
           <SpanSeparator></SpanSeparator>
@@ -199,7 +223,9 @@ function Programs() {
             />
             <H4>Relawan Teknologi</H4>
             <Paragraph>
-              Deep Tech Foundation hadir mengujungi teman-teman komunitas di seluruh wilayah Indonesia untuk menjalankan misi penyetaraan teknologi.
+              Deep Tech Foundation hadir mengujungi teman-teman komunitas di
+              seluruh wilayah Indonesia untuk menjalankan misi penyetaraan
+              teknologi.
             </Paragraph>
           </ServiceItem>
         </TestDiv>
@@ -373,7 +399,7 @@ const HeroHeading = styled.h1`
 `;
 
 const Parallax = styled.div`
-  background-image: url(https://www.newszii.com/wp-content/uploads/2018/11/Video-Editing-Software-Tools.jpg);
+  background-image: url("banner/banner.jpg");
   background-size: cover;
   height: auto;
   width: 100%;
